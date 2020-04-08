@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 app.get('/shop', function(req, res){
     console.log('hola desde shop');
     //responder con un texto
-    res.send('pagina de shop');
+    res.send('Página de tienda');
 });
 
 //abrir la paglina de la pagina
