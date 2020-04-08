@@ -1,0 +1,129 @@
+.banner{
+    display: flex;
+    
+}
+
+
+.banner__foto{
+    width: 50%;
+    margin-top: 40px;
+
+    @media (max-width: $responsive) {
+        width: 60%;
+        margin-top: 10px;
+    }
+}
+
+.banner__textalign{
+    margin-left: 300px;
+
+    @media (max-width: $responsive) {
+        margin: 0px 0px 0px 0px; 
+    }
+}
+
+
+.banner__text{
+    position: absolute;
+    right: 0px;
+    width: 1000px;
+    height: 460px;
+    background-color: $primary-color;
+    z-index: -1;
+
+    @media (max-width: $responsive) {
+        position: absolute;
+        right: 0px;
+        width: 260px;
+        height: 140px;
+        background-color: $primary-color;
+        z-index: -1;
+    }
+}
+
+
+.banner__h3{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 30px;
+    color: $texto-color;  
+    text-align: right;
+    margin: 120px 135px 0px 0px;
+
+    @media (max-width: $responsive) {
+        margin: 30px 15px 15px 0px;
+        font-size: 14px;
+    }
+}
+
+.banner__h2{
+    font-family: $specially-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size:42px;
+    color: $texto-color;
+    margin: -54px 0px 0px 170px;
+
+    @media (max-width: $responsive) {
+        margin: -20px 0px 10px 115px;
+        font-size: 15px;
+        z-index: -1px;
+    }
+}
+.banner__h4{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: $texto-color;   
+    line-height: 50px;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+
+    @media (max-width: $responsive) {
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.conoce{
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    margin: auto;
+    background: $decoration-color;
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+
+    @media (max-width: $responsive) {
+        font-size: 8px;
+        width: 80px;
+        height: 15px;
+        line-height: 15px;
+        margin: 0px 0px 0px 144px;
+        border-radius: 5px;
+    }
+}
+
+hr {
+    height: 10px;
+    width: 60%;
+    background-color:$decoration-color;
+    border: none;
+    margin: 40px 0px 0px 140px;
+
+    @media (max-width: $responsive) {
+        margin: 10px 0px 0px 100px;
+        width: 60%;
+        height: 5px;
+    }
+}
+
+

@@ -1,0 +1,213 @@
+.footer__main{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    background: #faf3f3;
+}
+
+.footer__logo{
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+
+    
+    @media (max-width: $responsive) {
+        width: 130px;
+    }
+}
+
+/*footer body*/
+
+.footer__text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #faf3f3;
+    padding: 25px 0px;
+
+    @media (max-width: $responsive) {
+        padding: 10px 0px 100px 0px;
+    }
+}
+
+/*product*/
+
+.footer__politics{
+    margin: 0px 200px 0px 0px;
+
+    @media (max-width: $responsive) {
+        margin: 0px 0px 0px 30px;
+    }
+}
+
+.footer__ph2{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: $texto-color;
+
+    
+    @media (max-width: $responsive) {
+        font-size: 15px;
+        line-height: 15px;
+    }
+}
+
+.footer__ph3{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+.footer__ph4{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+.footer__ph5{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+    margin: 0px auto;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+/*service*/
+.footer__service{
+    margin: 0px 200px 0px 0px;
+
+    @media (max-width: $responsive) {
+        margin: 0px 20px 0px 20px;
+    }
+}
+
+.footer__sh2{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: $texto-color;
+
+    
+    @media (max-width: $responsive) {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+}
+
+.footer__sh3{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+.footer__sh4{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+.footer__sh5{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+    margin: 0px auto;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+/*contact*/
+.footer__contact{
+    margin: 0px 0px 0px 0px;
+
+    @media (max-width: $responsive) {
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.footer__ch2{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 15px;
+        line-height: 15px;
+    }
+}
+
+.footer__ch3{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+.footer__ch4{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}
+
+.footer__ch5{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: $texto-color;
+    margin: 0px auto;
+
+    @media (max-width: $responsive) {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+$primary-color: #F2CEA2;
+$texto-color: #282727;
+$kactu-color: #434F73;
+$nav-color:#747373;
+$decoration-color:#E59E8D;
+$neutro-color:#F2EBDF;
+$primary-font:'Poppins';
+$kactu-font:'Shadows Into Light';
+$specially-font:'Meddon';
+$responsive: '414px';
+
+
+@import 'search';
+@import 'banner';
+@import 'mainheader';
+@import 'publicity';
+@import 'coleccion';
+@import 'content';
+@import 'galery';
+@import 'product';
+@import 'contact';
+@import 'block';
+@import 'footer';

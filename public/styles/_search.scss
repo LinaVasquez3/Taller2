@@ -1,0 +1,59 @@
+.mainheader__search{
+    text-decoration: none;
+    float:right;
+    width: 65px;
+    height: 35px;
+    background: $primary-color;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin: 20px 0px;
+
+    @media (max-width: $responsive) {
+        margin: 20px 0px 0px 95px;
+        float: none;
+        width: 55px;
+        height: 35px;
+    }
+}
+
+.mainheader__input{
+    font-family: $primary-font;
+    font-size: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    float: right;
+    width: 200px;
+    height: 35px;
+    background: #f1f1f1;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 10px;
+
+    @media (max-width: $responsive) {
+        width: 0px;
+        height: 0px;
+        margin: 0px 30px;
+        font-size: 0px;
+        float: none;
+    }
+}
+
+.mainheader__lupa{
+    width: 20px;
+    height: 25px;
+    justify-content: center;
+
+    @media (max-width: $responsive) {
+        width: 16px;
+        height: 20px;
+    }
+}
+
+.mainheader__button{
+    margin-top: 10 px;
+
+    @media (max-width: $responsive) {
+        margin-top: 10px;
+    }
+}

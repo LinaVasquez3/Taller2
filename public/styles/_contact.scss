@@ -1,0 +1,39 @@
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0px;
+
+}
+
+.contact__square{
+    width: 700px; 
+    height: 70px; 
+    line-height: 70px;
+    border: 2px solid $kactu-color;
+    text-align: center;
+    font-family: $specially-font;
+    color: $kactu-color;
+    font-size: 32px;
+
+    @media (max-width: $responsive) {
+            font-size: 25px;
+            width: 350px; 
+            height: 60px; 
+            line-height: 60px;
+    }
+}
+
+.contact__line{
+    display: flex;
+    height: 10px;
+    width: 110%;
+    background-color: $decoration-color;
+    border: none;
+    margin: -35px 0px 0px -30px;
+
+    @media (max-width: $responsive) {
+        margin: -32px 0px 0px -20px;
+        height: 8px;
+    }
+}

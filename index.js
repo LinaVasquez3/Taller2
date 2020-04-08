@@ -1,25 +1,37 @@
-//UTILIZARLO PARA QUE VAYA A OTRA PÁGINA. importar
+//importar path para hacer la pagina absoluta
+const path = require('path');
 
+//instaciar express
 const express = require('express');
 
-//cree un nuevo servidor y guardelo en esta constante app, 
+//instaciar serrvidor express
 const app = express();
 
-//RUTAS, cada vez que el usuario entra
-// '/' es la iniciail y la ruta 
-app.get('/', function(req, response){
-    console.log('hola desde la consola');
-    response.send('hola en chrome')
+//hacer publica la carpeta para que se muestre el style
+app.use(express.static('public'));
+
+
+//configurar ruta inicial
+app.get('/', function(req, res){
+    //console.log('hola desde la consola');
+    //res.send('hola en chrome')
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
+
 
 //abrir la shop de la pagina
 app.get('/shop', function(req, res){
     console.log('hola desde shop');
+    //responder con un texto
     res.send('pagina de shop');
 });
 
-//puerto en donde aparece la pagina
-//cuando empiece a escuchar es 80
+//abrir la paglina de la pagina
+app.get('/lina', function(req, res){
+    res.send('pagina de lina');
+});
+
+//iniciar servidor en puerto 3000
 app.listen(3000, function(){
     console.log('servidor iniciado en puerto 3000');
 });
