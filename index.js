@@ -30,13 +30,25 @@ app.get('/', function(req, res){
 app.get('/tienda', function(req, res){
     console.log('hola desde shop');
     //responder con un texto
+
+    //objeto contexto
+    var context = {
+        tittle: 'El titulo cambiado',
+    }
     //res.send('Página de tienda');
-    res.render('store');
+    res.render('store', context);
 });
 
 //Abrir la página de product de la página.
-app.get('/product', function(req, res){
+app.get('/product/:name', function(req, res){
     console.log('hola en product');
+    
+    //objeto contexto product
+    var context = {
+        
+    }
+    
+    console.log(req.params.name);
     //res.send('Página de product');
     res.render('product');
 });
@@ -45,6 +57,11 @@ app.get('/product', function(req, res){
 app.get('/checkout', function(req, res){
     console.log('hola en checkout');
     //res.send('Página de checkout');
+
+    //objeto contexto checkout
+    var context = {
+        
+    }
     res.render('checkout');
 });
 
