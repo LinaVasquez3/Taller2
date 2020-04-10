@@ -1619,4 +1619,18 @@ body, html {
   width: 500px;
   height: 40px;
 }
+
+.product__section {
+  background: lightsalmon;
+  width: 1000px;
+  height: 850px;
+}
+
+.product {
+  background: lightsteelblue;
+}
+
+.product--with-options {
+  background: limegreen;
+}
 /*# sourceMappingURL=main.css.map */

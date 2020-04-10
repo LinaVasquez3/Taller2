@@ -1,10 +1,46 @@
-<div>
+<div class="product" {{#if options}}products--with-options{{/if}}>
 <header class="product__header">
     <h1 class="product__tittle"> {{ tittle }} </h1>
 </header>
 
 <section class="product__section">  
     <img src="{{ img }}" alt="" srcset="">
-    <p> {{ description }} </p>
+    <p class="product__description"> {{ description }} </p>
 </section>
+
+
+<!--formas de hacerlo más interesante-->
+´
+<!--Options-->
+<!--si tiene opciones disponibles se muestra esto-->
+{{#if options}}
+<h3>tiene opciones disponibles</h3>
+{{#each options}}
+<p>{{ this }}</p>
+{{/each}}
+<!--si no tiene opciones disponibles se muestra esto-->
+{{else}}
+<h3>no tiene opciones disponibles</h3>
+{{/if}}
+
+
+<!--Variations-->
+{{#if variations}}
+<h3>Tiene Variaciones</h3>
+<ol>
+    <!--Renderizar lista de productos-->
+    {{#each variations}}
+    <li>
+        {{name}} <strong> {{price}}</strong>
+    </li>
+    {{/each}}
+</ol>
+{{/if}}
+
+
+<!--Price-->
+{{#if freeShiping}}
+<h3>envio gratis</h3>
+{{/if}}
+
 </div>

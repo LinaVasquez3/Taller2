@@ -6,3 +6,15 @@
     height: 40px;
 }
 
+.product__section{
+    background: lightsalmon;
+    width: 1000px;
+    height: 850px;
+}
+
+.product{
+    background: lightsteelblue;
+    &--with-options{
+        background:limegreen;
+    }
+}

@@ -53,6 +53,24 @@ app.get('/product/:name', function(req, res){
             tittle: 'titulo desde product',
             img: '/img/honey.jpg',
             description: 'descripcion desde product',
+            //filtros (options y variation)
+            options: ['grande', 'mediano', 'pequeño'],
+            variations: [
+                {
+                    name: 'con kit de brocas + brillo labial',
+                    price: 250 ,
+                },
+                {
+                    name: 'con kit de brocas,',
+                    price: 200 , 
+                },
+                {
+                    name: 'solo sombra',
+                    price: 100 , 
+                }
+            ],
+            price: 125,
+            freeShiping: true,
         }
     }
 
@@ -61,6 +79,9 @@ app.get('/product/:name', function(req, res){
             tittle: 'titulo desde fresa',
             img: '/img/strawberry.jpg',
             description: 'descripcion desde fresa',
+            options:[],
+            price: 50,
+            freeShiping: false,
         }
     }
     
