@@ -1633,4 +1633,35 @@ body, html {
 .product--with-options {
   background: limegreen;
 }
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thumb {
+  border: 3px solid #a6eca6;
+}
+
+.thumb__img {
+  width: 80px;
+}
+
+.thumb__button {
+  width: 350px;
+  height: 35px;
+  margin: 0px 0px 10px 0px;
+  line-height: 35px;
+  font-family: "Poppins";
+  border: 2px solid #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.thumb__button:hover {
+  background: #e6ebfa;
+}
 /*# sourceMappingURL=main.css.map */

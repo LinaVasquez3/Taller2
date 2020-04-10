@@ -1,4 +1,31 @@
 <h1>Tienda de maquillaje</h1>
 <h3 class = "tittle" > {{ tittle }} </h3>
+<p>holaaaaaaaaaaaa</p>
 
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta iste culpa quasi</p>
+<aside>
+    <h2>Filters</h2>
+</aside>
+
+<nav>
+
+</nav>
+
+
+<!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
+
+    <h2>Lista de productos</h2> 
+<main class="productList">
+    {{#each products}}
+    <!--recorrer el arreglo de producto-->
+    <!--Un div es un producto-->
+    <!--para que se vea la imagen y el precio de cada producto-->
+    <div class="thumb">
+        <h4 class="thumb__tittle">{{ tittle }}</h4>
+        <img class="thumb__img" src="{{ img }}" alt="">
+        <p>{{ price }}</p>
+        <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
+        <a href="/product/{{tittle}}/{{id}}" class="thumb__button">Ver producto</a>
+    </div>
+
+    {{/each}}
+</main>

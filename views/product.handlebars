@@ -10,7 +10,7 @@
 
 
 <!--formas de hacerlo más interesante-->
-´
+
 <!--Options-->
 <!--si tiene opciones disponibles se muestra esto-->
 {{#if options}}
@@ -39,8 +39,16 @@
 
 
 <!--Price-->
-{{#if freeShiping}}
-<h3>envio gratis</h3>
+{{#if freeShipping}}
+<!--si tiene envio gratis se muestra esto-->
+<h3>Envio gratis</h3>
+{{#each freeShipping}}
+<p>{{ this }}</p>
+{{/each}}
+<!--si no tiene envio gratis se muestra esto-->
+{{else}}
+<h3>Envio a cobro</h3>
 {{/if}}
+
 
 </div>

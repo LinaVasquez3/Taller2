@@ -1,0 +1,26 @@
+.productList{
+    display: flex;
+}
+
+.thumb{
+    border: 3px solid rgb(166, 236, 166);
+
+    &__img {
+        width: 80px;
+    }
+    &__button{
+        width: 350px;
+        height: 35px;
+        margin: 0px 0px 10px 0px;
+        line-height: 35px;
+        font-family: $primary-font;
+        border: 2px solid $kactu-color;
+        text-align: center;
+        font-size: 14px; 
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__button:hover{
+        background: rgb(230, 235, 250);
+    }
+}

@@ -4,6 +4,21 @@ const path = require('path');
 //importar express-handlebars
 const exphbs =require('express-handlebars');
 
+//PRODUCTS
+//importar modulo de product, importar la otra pagina de los 20 productos (product.js)
+const products = require('./product');
+
+//Recorrer productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
+products.forEach(function(elem){
+    if(elem.price >= 100){
+        elem.freeShipping = true;
+    }else{
+        elem.freeShipping = false;
+    }
+})
+console.log(products);
+
+
 //instaciar express
 const express = require('express');
 
@@ -34,56 +49,39 @@ app.get('/tienda', function(req, res){
     //objeto contexto
     var context = {
         tittle: 'El titulo cambiado',
+        //para que se vea la imagen y el precio de cada producto en la tienda
+        products: products,
     }
     //res.send('Página de tienda');
     res.render('store', context);
 });
 
 //Abrir la página de product de la página.
-app.get('/product/:name', function(req, res){
+app.get('/product/:name/:id', function(req, res){
     console.log('hola en product');
     
     //objeto contexto product
     var context = {};
-
-    //lista de productos (20)
-    //Aquí se coloca todo lo de cada producto
-    if(req.params.name == 'sombra'){
-        context = {
-            tittle: 'titulo desde product',
-            img: '/img/honey.jpg',
-            description: 'descripcion desde product',
-            //filtros (options y variation)
-            options: ['grande', 'mediano', 'pequeño'],
-            variations: [
-                {
-                    name: 'con kit de brocas + brillo labial',
-                    price: 250 ,
-                },
-                {
-                    name: 'con kit de brocas,',
-                    price: 200 , 
-                },
-                {
-                    name: 'solo sombra',
-                    price: 100 , 
-                }
-            ],
-            price: 125,
-            freeShiping: true,
+    
+    
+    //CONTEXT    
+    //NO ENTIENDO PA QUE ES ESTA VAINA
+    //POSIBLEMENTE ES EL ID
+    var foundElement = products.find(function(elem){
+        if(elem.id == req.params.id){
+            return true;
         }
+    });
+    context = foundElement;
+
+    /*Aquí se coloca todo lo de cada producto 
+    if(req.params.name == 'sombra'){
+        context = {};
     }
 
     if(req.params.name == 'fresa'){
-        context = {
-            tittle: 'titulo desde fresa',
-            img: '/img/strawberry.jpg',
-            description: 'descripcion desde fresa',
-            options:[],
-            price: 50,
-            freeShiping: false,
-        }
-    }
+        context = {};
+    }*/
     
     console.log(req.params.name);
     //res.send('Página de product');
