@@ -44,13 +44,29 @@ app.get('/product/:name', function(req, res){
     console.log('hola en product');
     
     //objeto contexto product
-    var context = {
-        
+    var context = {};
+
+    //lista de productos (20)
+    //Aquí se coloca todo lo de cada producto
+    if(req.params.name == 'sombra'){
+        context = {
+            tittle: 'titulo desde product',
+            img: '/img/honey.jpg',
+            description: 'descripcion desde product',
+        }
+    }
+
+    if(req.params.name == 'fresa'){
+        context = {
+            tittle: 'titulo desde fresa',
+            img: '/img/strawberry.jpg',
+            description: 'descripcion desde fresa',
+        }
     }
     
     console.log(req.params.name);
     //res.send('Página de product');
-    res.render('product');
+    res.render('product', context);
 });
 
 //Abrir la página de checkout de la página.
