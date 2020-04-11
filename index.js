@@ -10,12 +10,13 @@ const products = require('./product');
 
 //Recorrer productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
 products.forEach(function(elem){
-    if(elem.price >= 100){
+    if(elem.price >= '$22'){
         elem.freeShipping = true;
     }else{
         elem.freeShipping = false;
     }
-})
+});
+
 console.log(products);
 
 

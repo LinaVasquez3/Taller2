@@ -25,7 +25,7 @@ const products = [
                 name: 'Ball of Fire / matte neon orange',
             }
         ],
-        price: $25,
+        price: '$25',
     },
 
     //2 - Shadows
@@ -48,7 +48,7 @@ const products = [
                 name: 'Private Oasis / iridescent silk slip topper',
             }
         ],
-        price: $29,
+        price: '$29',
     },
 
     //3 - Shadows
@@ -71,7 +71,7 @@ const products = [
                 name: 'Magician / shimmering raspberry',
             }
         ],
-        price: $16,
+        price: '$16',
     },
 
     //4 - Shadows
@@ -94,7 +94,7 @@ const products = [
                 name: 'I Promise / light pink champagne, satin finish',
             }
         ],
-        price: $16,
+        price: '$16',
     },
 
     //5 - Shadows
@@ -117,7 +117,7 @@ const products = [
                 name: 'Rockstar / matte mulberry',
             }
         ],
-        price: $16,
+        price: '$16',
     },
     
 
@@ -129,7 +129,7 @@ const products = [
         tittle: 'The James Charles Brush Set - Brushes',
         img: '/img2/brushes/brushes1.jpg',
         description: `Get all the brushes you need for each step of your makeup routine—plus duplicates of the ones you’ll use the most.James Charles, curated this 34-piece collection of eye and face brushes, plus a beauty sponge and Custom Tubby. It really is the ultimate collection for creating any look you can imagine.`,
-        price: $149,
+        price: '$149',
     },
 
     //7 - Brushes
@@ -138,7 +138,7 @@ const products = [
         tittle: 'Brittany Bear 360 Nose Contour Collection - Brushes',
         img: '/img2/brushes/brushes2.jpg',
         description: `Get a handle on contouring with the help of Brittany Bear. This makeup artist knows nose contouring and has mastered the art of transformation. Meet her three holy-grail brushes for a sculpted, snatched nose.`,
-        price: $20,
+        price:'$20',
     },
 
     //8 - Brushes
@@ -147,7 +147,7 @@ const products = [
         tittle: 'The Jeffree Start Brush Collection - Brushes',
         img: '/img2/brushes/brushes3.jpg',
         description: `A jaw-dropping, beat-creating brush collection from our fiercest of fierce babes, Jeffree Star. You’ll live for these seven iconic, custom brushes that kick sass and take names. You. Better. Work.`,
-        price: $49,
+        price: '$49',
     },
 
     //9 - Brushes
@@ -156,7 +156,7 @@ const products = [
         tittle: 'Jaclyn Hill The Eye Master Collection - Brushes',
         img: '/img2/brushes/brushes4.jpg',
         description: `Jaclyn Hill can rock a killer eye look like no other. Have a staring contest with her using her 8 go-to blending and buffing powerhouses.`,
-        price: $39,
+        price: '$39',
     },
 
     //10 - Brushes
@@ -165,7 +165,7 @@ const products = [
         tittle: 'The Jeffree Start Eye & Face Brush Collection - Brushes',
         img: '/img2/brushes/brushes5.jpg',
         description: `A ride-or-die, beat-creating brush collection from our one and only, Jeffree Star. You’ll live for these seven sickening brushes that kick sass and take names. You. Better. Work.`,
-        price: $49,
+        price: '$49',
     },
 
     //TOOOLLSSS
@@ -176,7 +176,7 @@ const products = [
         tittle: 'Brush Cleansing Balm + Scrubber - Lemon Fresh - Tools',
         img: '/img2/tools/tools1.jpg',
         description: `Take your brush game to the next level. This powerful duo gives your brush and beauty sponge besties the ultimate deep clean.`,
-        price: $25,
+        price: '$25',
     },
 
     //12 - Tools 
@@ -185,7 +185,7 @@ const products = [
         tittle: 'RC2 - Brush Tubby Case - Tools',
         img: '/img2/tools/tools2.png',
         description: `This stylish mega-sized case is big enough to keep even a large brush collection with a soft and sturdy faux leather covering that maintains its shape and is great for travel. The top snaps on and off easily and keeps the brushes in pristine shape and ready for use.`,
-        price: $15,
+        price: '$15',
     },
 
     
@@ -195,7 +195,7 @@ const products = [
         tittle: 'Color Switch Solo - Tools',
         img: '/img2/tools/tools3.jpg',
         description: `Color Switch Solo by Vera Mona allows the makeup artist to quickly and efficiently switch between colors on your eyeshadow brushes. It is an essential tool that is extremely helpful while using multiple shades.`,
-        price: $30,
+        price: '$30',
     },
     
     //14 - Tools 
@@ -204,7 +204,7 @@ const products = [
         tittle: 'Lash Book - Tools',
         img: '/img2/tools/tools4.jpg',
         description: `Keep it together, Morphe Babe. Get organized with this sleek, easy-access case that safely stores up to 8 pairs of faux lashes. Each lash style will stay clean, tidy, and in perfect shape—so you’ll always be ready to rock your most flattering flutter.`,
-        price: $49,
+        price: '$49',
     },
 
     //15 - Tools
@@ -213,7 +213,7 @@ const products = [
         tittle: 'ZMB4 - Loader Set Bag - tools',
         img: '/img2/tools/tools5.jgp',
         description: `This bag is extra-large to hold all the essentials of not only makeup and tools, but tissues, emergency supplies and whatever else might be necessary when unusual situations arise and a pro artist needs to be prepared.`,
-        price: $20,
+        price: '$20',
     },
 
     
@@ -225,7 +225,7 @@ const products = [
         tittle: 'Pro Puff Brush - Body',
         img: '/img2/body/body1.jpg',
         description: `Babes, welcome to a new era in makeup application. A finishing brush with a difference, get your all-over glow on with the super-soft Pro Puff Face and Body Brush. Fitting perfectly into the palm of your hand, this oversized brush allows for effortless head-to-toe application of any powdered bronzer, highlighter, or setting powder.`,
-        price: $46,
+        price: '$46',
     },
 
     //17 - Body 
@@ -234,7 +234,7 @@ const products = [
         tittle: 'Glamabronze Deluxe Face & Body Brush - Body',
         img: '/img2/body/body2.jpg',
         description: `This bangin’ brush is perfectly shaped so you can lay on color how and where you want it. Pair with our Glamabronze Face & Body Bronzer to tan up and stand out.`,
-        price: $16,
+        price: '$16',
     },
 
     
@@ -244,7 +244,7 @@ const products = [
         tittle: 'Glamabronze Deluxe Face & Body Brush - Body',
         img: '/img2/body/body3.jpg',
         description: `Go on with your bronze self. This super-sized face and body bronzer delivers a buildable bronze and tan-tastic matte finish with the sweep of a brush. So, go ahead and bask in sunkissed perfection. It’s sexy beach vibes all the way.`,
-        price: $12,
+        price: '$12',
     },
     
     //19 - Body 
@@ -253,7 +253,7 @@ const products = [
         tittle: 'Liquid Luster Mini Highlighter Drops - Body',
         img: '/img2/body/body4.jpg',
         description: `Ready, set, shine. This collection of four mini highlighter drops lets you choose how you wanna get lit. From a Flash of bronze to a Strobe of shimmering pink, there’s light in every drop. Use alone for a killer highlight or mix with your foundation for an illuminating boost.`,
-        price: $25,
+        price: '$25',
     },
 
     //20 - body
@@ -262,7 +262,7 @@ const products = [
         tittle: 'Liquid frost - Michigan Ice - Body',
         img: '/img2/body/body5.jgp',
         description: `Give your skin some blinding bling. Liquid Frost Liquid Highlighters fuse a metallic liquid formula with glitter to get your glow up from the flo’ up. This crazy-reflective sheen is for every babe who needs a lil’ extra in their lives..`,
-        price: $35,
+        price: '$35',
     },
 
     
