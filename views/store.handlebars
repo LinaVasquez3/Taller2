@@ -1,4 +1,4 @@
-<h1>Tienda de maquillaje</h1>
+<h1>Shop</h1>
 <h3 class = "tittle" > {{ tittle }} </h3>
 <p>holaaaaaaaaaaaa</p>
 
@@ -24,8 +24,35 @@
         <img class="thumb__img" src="{{ img }}" alt="">
         <p>{{ price }}</p>
         <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
-        <a href="/product/{{tittle}}/{{id}}" class="thumb__button">Ver producto</a>
+        <a href="/product/{{tittle}}/{{id}}" class="thumb__button">View more</a>
     </div>
 
     {{/each}}
 </main>
+
+<!--filtros
+<section>  
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Shadows</th>
+            <th>Brushes</th>
+            <th>Tools</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each product}}
+        <tr>
+            <td>{{ @index }} </td>
+            <td>{{ Shadows }} </td>
+            <td>{{ Brushes }} <td>            
+            <td>{{ Tools }} </td> 
+            <td>{{ Body }} </td>  
+                             
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</section>-->

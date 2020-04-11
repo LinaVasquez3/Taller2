@@ -42,15 +42,40 @@ app.get('/', function(req, res){
 });
 
 //Abrir la shop de la pagina
-app.get('/tienda', function(req, res){
+app.get('/shop', function(req, res){
     console.log('hola desde shop');
+    //console.log(req.query);
     //responder con un texto
+    
+    //Variable filtrada
+    //var filtered = product;
+    /*BUSCAR productos filtrados por precio
+    if(req.query.price_lt){
+        //crear copia de arreglo filtrado
+        filtered = products.filter(function (elem){
+            //si el precio es menor al precio del que el usuario pregunto 
+            if(elem.price < req.query.price_lt){
+                return true;
+        });
+    };
+
+    //BUSCAR productos filtrados por palabra
+    if(req.query.search){
+    filtered = products.filter(function (elem) {
+      // si el nombre del producto incluye lo que el usuario buscó
+        if(elem.name.includes(req.query.search)){
+            return true;
+        }
+    });
+  }
+    */
 
     //objeto contexto
     var context = {
         tittle: 'El titulo cambiado',
         //para que se vea la imagen y el precio de cada producto en la tienda
         products: products,
+        //products: filtered,
     }
     //res.send('Página de tienda');
     res.render('store', context);

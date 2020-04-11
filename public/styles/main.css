@@ -1664,4 +1664,11 @@ body, html {
 .thumb__button:hover {
   background: #e6ebfa;
 }
+
+/*.table{
+    td{
+        border: 3px solid yellow;
+        margin: 0px;
+    }
+}*/
 /*# sourceMappingURL=main.css.map */
