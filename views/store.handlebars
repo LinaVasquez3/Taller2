@@ -1,34 +1,32 @@
-<h1>Shop</h1>
-<h3 class = "tittle" > {{ tittle }} </h3>
-<p>holaaaaaaaaaaaa</p>
+<header class="productHeader">
+    <h1>Shop</h1>
+    <!--<h3 class="tittle"> {{ tittle }} </h3>-->
+    <h2>NEW THINGS FOR YOU</h2>
+    <p>Check out the best details to be the best version of you</p>
+</header>
 
 <aside>
     <h2>Filters</h2>
 </aside>
 
-<nav>
-
-</nav>
-
-
 <!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
-
-    <h2>Lista de productos</h2> 
-<main class="productList">
-    {{#each products}}
-    <!--recorrer el arreglo de producto-->
-    <!--Un div es un producto-->
-    <!--para que se vea la imagen y el precio de cada producto-->
-    <div class="thumb">
-        <h4 class="thumb__tittle">{{ tittle }}</h4>
-        <img class="thumb__img" src="{{ img }}" alt="">
-        <p>{{ price }}</p>
-        <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
-        <a href="/product/{{tittle}}/{{id}}" class="thumb__button">View more</a>
-    </div>
-
-    {{/each}}
-</main>
+<section>
+    <h2>Lista de productos</h2>
+    <main class="productList">
+        {{#each products}}
+        <!--recorrer el arreglo de producto-->
+        <!--Un div es un producto-->
+        <!--para que se vea la imagen y el precio de cada producto-->
+        <div class="thumb">
+            <h4 class="thumb__tittle"> {{ tittle }} </h4>
+            <img class="thumb__img" src="{{ img }}" alt="">
+            <p>{{ price }}</p>
+            <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
+            <a href="/product/{{tittle}}/{{id}}" class="thumb__button">View more</a>
+        </div>
+        {{/each}}
+    </main>
+</section>
 
 <!--filtros
 <section>  
@@ -37,7 +35,7 @@
         <tr>
             <th>#</th>
             <th>Shadows</th>
-            <th>Brushes</th>
+            <th>Lips</th>
             <th>Tools</th>
             <th>Body</th>
         </tr>
@@ -47,7 +45,7 @@
         <tr>
             <td>{{ @index }} </td>
             <td>{{ Shadows }} </td>
-            <td>{{ Brushes }} <td>            
+            <td>{{ Lips }} <td>            
             <td>{{ Tools }} </td> 
             <td>{{ Body }} </td>  
                              

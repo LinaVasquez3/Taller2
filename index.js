@@ -2,17 +2,17 @@
 const path = require('path');
 
 //importar express-handlebars
-const exphbs =require('express-handlebars');
+const exphbs = require('express-handlebars');
 
 //PRODUCTS
 //importar modulo de product, importar la otra pagina de los 20 productos (product.js)
 const products = require('./product');
 
 //Recorrer productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
-products.forEach(function(elem){
-    if(elem.price >= '$22'){
+products.forEach(function (elem) {
+    if (elem.price >= '$22') {
         elem.freeShipping = true;
-    }else{
+    } else {
         elem.freeShipping = false;
     }
 });
@@ -36,65 +36,65 @@ app.use(express.static('public'));
 
 
 //Configurar ruta inicial - se agregó taller1
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
     //console.log('hola desde la consola');
     //res.send('hola en chrome')
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 //Abrir la shop de la pagina
-app.get('/shop', function(req, res){
+app.get('/shop', function (req, res) {
     console.log('hola desde shop');
-    //console.log(req.query);
+    console.log(req.query);
     //responder con un texto
-    
+
     //Variable filtrada
-    //var filtered = product;
-    /*BUSCAR productos filtrados por precio
-    if(req.query.price_lt){
-        //crear copia de arreglo filtrado
-        filtered = products.filter(function (elem){
-            //si el precio es menor al precio del que el usuario pregunto 
-            if(elem.price < req.query.price_lt){
+    var filtered = products;
+    //Buscar productos filtrados por precio 
+    if (req.query.price_lt) {
+        //crear copia del arreglo filtrado 
+        filtered = products.filter(function (elem) {
+            // precio menor al que el usuario preguntó
+            if (elem.price < req.query.price_lt) {
                 return true;
+            }
         });
-    };
+    }
 
     //BUSCAR productos filtrados por palabra
-    if(req.query.search){
-    filtered = products.filter(function (elem) {
-      // si el nombre del producto incluye lo que el usuario buscó
-        if(elem.name.includes(req.query.search)){
-            return true;
-        }
-    });
-  }
-    */
+    if (req.query.search) {
+        filtered = products.filter(function (elem) {
+            // si el nombre del producto incluye lo que el usuario buscó
+            if (elem.tittle.includes(req.query.search)) {
+                return true;
+            }
+        });
+    }
+
 
     //objeto contexto
     var context = {
-        tittle: 'El titulo cambiado',
         //para que se vea la imagen y el precio de cada producto en la tienda
         products: products,
-        //products: filtered,
+        products: filtered,
     }
     //res.send('Página de tienda');
     res.render('store', context);
 });
 
 //Abrir la página de product de la página.
-app.get('/product/:name/:id', function(req, res){
+app.get('/product/:name/:id', function (req, res) {
     console.log('hola en product');
-    
+
     //objeto contexto product
     var context = {};
-    
-    
+
+
     //CONTEXT    
     //NO ENTIENDO PA QUE ES ESTA VAINA
     //POSIBLEMENTE ES EL ID
-    var foundElement = products.find(function(elem){
-        if(elem.id == req.params.id){
+    var foundElement = products.find(function (elem) {
+        if (elem.id == req.params.id) {
             return true;
         }
     });
@@ -108,31 +108,31 @@ app.get('/product/:name/:id', function(req, res){
     if(req.params.name == 'fresa'){
         context = {};
     }*/
-    
+
     console.log(req.params.name);
     //res.send('Página de product');
     res.render('product', context);
 });
 
 //Abrir la página de checkout de la página.
-app.get('/checkout', function(req, res){
+app.get('/checkout', function (req, res) {
     console.log('hola en checkout');
     //res.send('Página de checkout');
 
     //objeto contexto checkout
     var context = {
-        
+
     }
     res.render('checkout');
 });
 
 
 //abrir la pagina de lina de la pagina
-app.get('/lina', function(req, res){
+app.get('/lina', function (req, res) {
     res.send('pagina de lina');
 });
 
 //iniciar servidor en puerto 3000
-app.listen(3000, function(){
+app.listen(3000, function () {
     console.log('servidor iniciado en puerto 3000');
 });
