@@ -1,32 +1,58 @@
-<header class="productHeader">
-    <h1>Shop</h1>
-    <!--<h3 class="tittle"> {{ tittle }} </h3>-->
-    <h2>NEW THINGS FOR YOU</h2>
-    <p>Check out the best details to be the best version of you</p>
-</header>
+<!--CLASE DE LA TIENDA-->
 
-<aside>
-    <h2>Filters</h2>
-</aside>
+<!--Imagen de header
+<header class="shopHeader">
+    <img class="shopHeader__img" src="{{ img }}" alt="">
+</header>-->
 
-<!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
-<section>
-    <h2>Lista de productos</h2>
-    <main class="productList">
-        {{#each products}}
-        <!--recorrer el arreglo de producto-->
-        <!--Un div es un producto-->
-        <!--para que se vea la imagen y el precio de cada producto-->
-        <div class="thumb">
-            <h4 class="thumb__tittle"> {{ tittle }} </h4>
-            <img class="thumb__img" src="{{ img }}" alt="">
-            <p>{{ price }}</p>
-            <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
-            <a href="/product/{{tittle}}/{{id}}" class="thumb__button">View more</a>
+
+<body>
+
+    <section class="shopPic">
+            <img class="shopPic__imagen" src="/img/img2/shop.jpg" alt="">
+    </section>
+
+
+    <!--Filtros-->
+    <nav>
+        Filter by price
+        <select>
+            <option value="" disabled="true" selected="true">Choose an option</option>
+            <option value="$14">Less than 14</option>
+            <option value="$22">less than 22</option>
+        </select>
+    </nav>
+    <!--shop-->
+    <section class="shop">
+        <div class="shop__shineshop">
+            <div class="shop__square">Shop
+                <hr class="shop__line">
+            </div>
         </div>
-        {{/each}}
-    </main>
-</section>
+    </section>
+
+    <!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
+    <section>
+        <h2>Lista de productos</h2>
+        <main class="productList">
+            {{#each products}}
+            <!--recorrer el arreglo de producto-->
+            <!--Un div es un producto-->
+            <!--para que se vea la imagen y el precio de cada producto-->
+            <div class="thumb">
+                <img class="thumb__img" src="{{ img }}" alt="">
+                <h1 class="thumb__tittle"> {{ tittle }} </h1>
+                <h3 class="thumb__name"> {{ name }}</h3>
+                <p>{{ price }}</p>
+                <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
+                <a href="/product/{{tittle}}/{{id}}" class="thumb__button">View more</a>
+            </div>
+            {{/each}}
+        </main>
+    </section>
+
+<script src="/scripts/client.js"></script>
+</body>
 
 <!--filtros
 <section>  

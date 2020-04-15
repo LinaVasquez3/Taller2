@@ -1,17 +1,41 @@
+<!--CLASE QUE DEL PRODUCTO-->
+
 <div class="product" {{#if options}}products--with-options{{/if}}>
-<header class="product__header">
-    <h1 class="product__tittle"> {{ tittle }} </h1>
-</header>
 
-<section class="product__section">  
-    <img src="{{ img }}" alt="" srcset="">
-    <p class="product__description"> {{ description }} </p>
-</section>
+    <!--<header class="product__header">
+        <h1 class="product__tittle"> {{ tittle }} </h1>
+    </header>-->
 
+    <section class="product__section">
+        <!--<h2 class="product__name"> {{ name }}</h2>
+        <img src="{{ img }}" alt="" srcset="">
+        <p class="product__description"> {{ description }} </p>-->
 
-<!--formas de hacerlo más interesante-->
+        <img class="product__img" src="{{ img }}" alt="">
+        <h1 class="product__tittle"> {{ tittle }} </h1>
+        <h3 class="product__name"> {{ name }}</h3>
+        <p class="product__description"> {{ description }} </p>
+        <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
+        <p>{{ price }}</p>
+        <a href="/product/{{tittle}}/{{id}}" class="product__button">Add to bag</a>
 
-<!--Options
+        <!--Price-->
+        {{#if freeShipping}}
+        <!--si tiene envio gratis se muestra esto-->
+        <h3>Envio gratis</h3>
+        {{#each freeShipping}}
+        <p>{{ this }}</p>
+        {{/each}}
+        <!--si no tiene envio gratis se muestra esto-->
+        {{else}}
+        <h3>Envio a cobro</h3>
+        {{/if}}
+
+    </section>
+
+    <!--formas de hacerlo más interesante-->
+
+    <!--Options
 si tiene opciones disponibles se muestra esto
 {{#if options}}
 <h3>tiene opciones disponibles</h3>
@@ -24,31 +48,21 @@ si no tiene opciones disponibles se muestra esto
 {{/if}}-->
 
 
-<!--Variations-->
-{{#if variations}}
-<h3>Tiene Variaciones</h3>
-<ol>
-    <!--Renderizar lista de productos-->
-    {{#each variations}}
-    <li>
-        {{name}} <strong> {{price}}</strong>
-    </li>
-    {{/each}}
-</ol>
-{{/if}}
+    <!--Variations
+    {{#if variations}}
+    <h3>Tiene Variaciones</h3>
+    <ol>
+        Renderizar lista de productos
+        {{#each variations}}
+        <li>
+            {{name}} <strong> {{price}}</strong>
+        </li>
+        {{/each}}
+    </ol>
+    {{/if}}-->
 
 
-<!--Price-->
-{{#if freeShipping}}
-<!--si tiene envio gratis se muestra esto-->
-<h3>Envio gratis</h3>
-{{#each freeShipping}}
-<p>{{ this }}</p>
-{{/each}}
-<!--si no tiene envio gratis se muestra esto-->
-{{else}}
-<h3>Envio a cobro</h3>
-{{/if}}
+
 
 
 </div>
