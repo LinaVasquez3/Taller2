@@ -10,7 +10,7 @@ const products = require('./product');
 
 //Recorrer productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
 products.forEach(function (elem) {
-    if (elem.price >= '$22') {
+    if (elem.price >= 16) {
         elem.freeShipping = true;
     } else {
         elem.freeShipping = false;
@@ -51,11 +51,15 @@ app.get('/shop', function (req, res) {
     //Variable filtrada
     var filtered = products;
     //Buscar productos filtrados por precio 
-    if (req.query.price_lt) {
+    if (req.query.price) {
         //crear copia del arreglo filtrado 
         filtered = products.filter(function (elem) {
+            var parts = req.query.price.split('_'); // more_16
             // precio menor al que el usuario preguntó
-            if (elem.price < req.query.price_lt) {
+            if (elem.price < parts[1] && parts[0] == 'less') {
+                return true;
+            }
+            if (elem.price >= parts[1] && parts[0] == 'more') {
                 return true;
             }
         });
