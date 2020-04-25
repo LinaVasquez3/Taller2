@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 function configureRoutes(app, db) {
 
     //Configurar ruta inicial - se agregó taller1
@@ -13,15 +15,23 @@ function configureRoutes(app, db) {
         console.log(req.query);
 
         //Variable filtrada
-        
+
+        var filters = {
+
+        }
+
         //Buscar productos filtrados por precio 
         if (req.query.price) {
-            
+
+        }
+
+        //Buscar productos filtrados por precio 
+        if (req.query.price_lt) {
+
         }
 
         //FREESHIPING
-
-        //Recorrer productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
+        //correr productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
         products.forEach(function (elem) {
             if (elem.price >= 16) {
                 elem.freeShipping = true;
@@ -40,15 +50,20 @@ function configureRoutes(app, db) {
             });
         }
 
-        //objeto contexto
-        var context = {
-            //para que se vea la imagen y el precio de cada producto en la tienda
-            products: products,
-            products: filtered,
-        }
-
-        //res.send('Página de tienda');
-        res.render('store', context);
+        // Get the products collection
+        const collection = db.collection('products');
+        // Find some products
+        collection.find({filters}).toArray(function (err, docs) {
+            assert.equal(err, null);
+            //objeto contexto
+            var context = {
+                //para que se vea la imagen y el precio de cada producto en la tienda
+                products: products,
+                products: docs,
+            }
+            //res.send('Página de tienda');
+            res.render('store', context);
+        });
     });
 
     //Abrir la página de product de la página.
@@ -97,4 +112,4 @@ function configureRoutes(app, db) {
 
 }
 
-    module.exports = configureRoutes;
+module.exports = configureRoutes;
