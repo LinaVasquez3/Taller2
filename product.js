@@ -10,10 +10,11 @@ const products = [
 
     //1 - Shadows
     {
-        id: 1,
         tittle: 'Uh-Huh Honey',
         name: 'Shine Shadows',
         img: '/img/img2/shadows/shadows1.jpg',
+        rating: 4.2,
+        discount: 50,
         description: `Sweet like honey, bright like the sun. 🍯
 
         This yellow monochromatic palette features every shade of yellow under the sun. 🌞
@@ -39,7 +40,6 @@ const products = [
 
     //2 - Shadows
     {
-        id: 2,
         tittle: 'Strawberry Shake',
         name: 'Shine Shadows',
         img: '/img/img2/shadows/shadows2.jpg',
@@ -51,7 +51,6 @@ const products = [
 
     //3 - Shadows
     {
-        id: 3,
         tittle: 'Orange you glad?',
         name: 'Shine Shadows',
         img: '/img/img2/shadows/shadows3.jpg',
@@ -65,7 +64,6 @@ const products = [
 
     //4 - Shadows
     {
-        id: 4,
         tittle: 'Lilac you a lot',
         name: 'Shine Shadows',
         img: '/img/img2/shadows/shadows4.jpg',
@@ -75,7 +73,6 @@ const products = [
 
     //5 - Shadows
     {
-        id: 5,
         tittle: 'Just my luck',
         name: 'Shine Shadows',
         img: '/img/img2/shadows/shadows5.jpg',
@@ -90,7 +87,6 @@ const products = [
 
     //6 - lips
     {
-        id: 6,
         tittle: 'Drop a hint',
         name: 'Glow Lips',
         img: '/img/img2/lips/lips1.jpg',
@@ -101,7 +97,6 @@ const products = [
 
     //7 - lips
     {
-        id: 7,
         tittle: 'What the fluff',
         name: 'Glow Lips',
         img: '/img/img2/lips/lips2.jpg',
@@ -111,7 +106,6 @@ const products = [
 
     //8 - lips
     {
-        id: 8,
         tittle: 'Powder Room',
         name: 'Glow Lips',
         img: '/img/img2/lips/lips3.jpg',
@@ -121,17 +115,16 @@ const products = [
 
     //9 - lips
     {
-        id: 9,
         tittle: 'Lofty Goals',
         name: 'Glow Lips',
         img: '/img/img2/lips/lips4.jpg',
+        rating: 4.0, 
         description: `Sky’s the limit with these fun coral lips! Add the perfect velvet touch of color to your look.`,
         price: 15,
     },
 
     //10 - lips
     {
-        id: 10,
         tittle: 'Kiss the dusk',
         name: 'Glow Lips',
         img: '/img/img2/lips/lips5.jpg',
@@ -143,7 +136,6 @@ const products = [
 
     //11 - skin
     {
-        id: 11,
         tittle: 'Avocuddle',
         name: 'Radiate Skin',
         img: '/img/img2/skin/skin1.jpg',
@@ -153,7 +145,6 @@ const products = [
 
     //12 - skin 
     {
-        id: 12,
         tittle: 'Multi-Maske',
         name: 'Radiate Skin',
         img: '/img/img2/skin/skin2.jpg',
@@ -164,7 +155,6 @@ const products = [
 
     //13 - skin 
     {
-        id: 13,
         tittle: 'A-ha moment',
         name: 'Radiate Skin',
         img: '/img/img2/skin/skin3.jpg',
@@ -174,7 +164,6 @@ const products = [
 
     //14 - skin 
     {
-        id: 14,
         tittle: 'The daily face',
         name: 'Radiate Skin',
         img: '/img/img2/skin/skin4.jpg',
@@ -184,7 +173,6 @@ const products = [
 
     //15 - skin
     {
-        id: 15,
         tittle: 'Multi-masking Mask',
         name: 'Radiate Skin',
         img: '/img/img2/skin/skin5.jpg',
@@ -197,7 +185,6 @@ const products = [
 
     //16 - Mascara
     {
-        id: 16,
         tittle: 'Lovers Coral',
         name: 'Light Mascara',
         img: '/img/img2/mascara/mascara1.jpg',
@@ -207,7 +194,6 @@ const products = [
 
     //17 - Mascara 
     {
-        id: 17,
         tittle: 'Blue ya mind',
         name: 'Light Mascara',
         img: '/img/img2/mascara/mascara2.jpg',
@@ -218,7 +204,6 @@ const products = [
 
     //18 - Mascara 
     {
-        id: 18,
         tittle: 'Purple prose',
         name: 'Light Mascara',
         img: '/img/img2/mascara/mascara3.jpg',
@@ -228,7 +213,6 @@ const products = [
 
     //19 - Mascara 
     {
-        id: 19,
         tittle: 'Black on black',
         name: 'Light Mascara',
         img: '/img/img2/mascara/mascara4.jpg',
@@ -238,7 +222,6 @@ const products = [
 
     //20 - mascara
     {
-        id: 20,
         tittle: 'Bff lover',
         name: 'Light Mascara',
         img: '/img/img2/mascara/mascara5.jpg',
