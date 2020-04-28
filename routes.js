@@ -14,26 +14,35 @@ function configureRoutes(app, db) {
         console.log('hola desde shop');
         console.log(req.query);
 
-        //Variable filtrada
-
+        //Filtros
         var filters = {
-
+            $and:[]
         }
-
-        //Buscar productos filtrados por precio 
-        if (req.query.price) {
-
-        }
-
-        //Buscar productos filtrados por precio 
+        
+        //Buscar productos filtrados por precio-menor
         if (req.query.price_lt) {
-
+            filters.$and.push({
+                //crear  arreglo filtrado
+                price: {
+                    $lte: parseInt(req.query.price_lt)
+                } 
+            })
         }
 
+        //Buscar productos filtrados por precio-mayor
+        if (req.query.price_gt) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                price: {
+                    $gte: parseInt(req.query.price_gt)
+                } 
+            })
+        }
+        
         //FREESHIPING
         //correr productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
         products.forEach(function (elem) {
-            if (elem.price >= 16) {
+            if (elem.price_lt >= 16) {
                 elem.freeShipping = true;
             } else {
                 elem.freeShipping = false;
@@ -42,18 +51,29 @@ function configureRoutes(app, db) {
 
         //BUSCAR productos filtrados por palabra
         if (req.query.search) {
-            filtered = products.filter(function (elem) {
-                // si el nombre del producto incluye lo que el usuario buscó
-                if (elem.tittle.includes(req.query.search)) {
-                    return true;
-                }
-            });
+            filters.$and.push({
+                //crear  arreglo filtrado
+                name: {
+                    $regex: new RegExp(req.query.search,'i'),
+                } 
+            })
+        }
+
+        //Ordenamientos
+        var sortings={};
+        //descendiente
+          if(req.query.sort == 'price_desc'){
+              sortings.price = -1;
+          }
+        //ascendiente
+          if(req.query.sort == 'price_asc'){
+            sortings.price = 1;
         }
 
         // Get the products collection
         const collection = db.collection('products');
         // Find some products
-        collection.find({filters}).toArray(function (err, docs) {
+        collection.find({filters}).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
             //objeto contexto
             var context = {
