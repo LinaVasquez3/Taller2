@@ -15,6 +15,9 @@ const express = require('express');
 //instaciar serrvidor express
 const app = express();
 
+//Enviar informacióndel checkout al servidor
+app.use(express.urlencoded({extended: true}));
+
 //Registar estar de render para handlebars
 app.engine('handlebars', exphbs());
 //Use el motor de render handlebars
