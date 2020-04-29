@@ -15,7 +15,7 @@ function configureRoutes(app, db) {
         console.log('hola desde shop');
         console.log(req.query);
 
-        //Filtros
+        //Filtros 
         var filters = {
             $and: []
         }
@@ -39,16 +39,6 @@ function configureRoutes(app, db) {
                 }
             })
         }
-
-        //FREESHIPING
-        //correr productos para agregar freeShipping (si el precio es mayor o menor a un valor, el envio es gratis)
-        products.forEach(function (elem) {
-            if (elem.price_lt >= 16) {
-                elem.freeShipping = true;
-            } else {
-                elem.freeShipping = false;
-            }
-        });
 
         //BUSCAR productos filtrados por palabra
         if (req.query.search) {
@@ -79,15 +69,15 @@ function configureRoutes(app, db) {
         // Get the products collection
         const collection = db.collection('products');
         // Find some products
-        collection.find({ filters }).sort(sortings).toArray(function (err, docs) {
+        collection.find( filters ).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
 
             //objeto contexto
             var context = {
                 //para que se vea la imagen y el precio de cada producto en la tienda
-                products: products,
                 products: docs,
             }
+            console.log(context);
 
             //res.send('Página de tienda');
             res.render('store', context);
@@ -100,11 +90,10 @@ function configureRoutes(app, db) {
         //error 404
         if (req.params.id.length != 24) {
             res.redirect('/404');
+            return
         }
 
         const filter = {
-
-
             _id: {
                 $eq: new ObjectId(req.params.id)
             }
@@ -112,12 +101,23 @@ function configureRoutes(app, db) {
 
         const collection = db.collection('products');
         // Find some products
-        collection.find({ filter }).toArray(function (err, docs) {
+        collection.find( filter ).toArray(function (err, docs) {
             assert.equal(err, null);
+
+            //FREESHIPING
+            docs.forEach(function (elem) {
+                if (elem.price >= 16) {
+                    elem.freeShipping = true;
+                } else {
+                    elem.freeShipping = false;
+                }
+            });
+
 
             //REDIRECCIONAR AL USUARIO A PAGINA 404
             if (docs.length == 0) {
                 res.redirect('/404');
+                return
             }
 
             //objeto contexto
@@ -127,22 +127,6 @@ function configureRoutes(app, db) {
             //res.send('Página de tienda');
             res.render('product', context);
         });
-
-
-        //objeto contexto product
-        var context = {};
-
-        //pasar variables de ese elemento al contesto
-        context = foundElement;
-        //CONTEXT ID
-        var foundElement = products.find(function (elem) {
-            if (elem.id == req.params.id) {
-                return true;
-            }
-        });
-
-        console.log(req.params.name);
-        //res.send('Página de product');
 
 
     });
@@ -162,7 +146,7 @@ function configureRoutes(app, db) {
     });
 
     //recibir informacion la página de checkout.
-    app.post('/checkout', function(req,res){
+    app.post('/checkout', function (req, res) {
         res.send('test');
         console.log('req.body');
     });
