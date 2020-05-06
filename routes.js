@@ -152,7 +152,6 @@ function configureRoutes(app, db) {
 
         //inputs requeridos
         if (!req.body.firstname || !req.body.address) {
-            //res.send('error');
             //cuando hay un error 
             res.redirect('/checkout?error=true');
             return;

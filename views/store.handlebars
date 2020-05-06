@@ -9,7 +9,7 @@
 <body>
 
     <section class="shopPic">
-            <img class="shopPic__imagen" src="/img/img2/shop.jpg" alt="">
+        <img class="shopPic__imagen" src="/img/img2/shop.jpg" alt="">
     </section>
 
 
@@ -24,7 +24,7 @@
         </select>
     </nav>
 
-    
+
     <!--shop-->
     <section class="shop">
         <div class="shop__shineshop">
@@ -49,12 +49,15 @@
                 <p>{{ price }}</p>
                 <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
                 <a href="/product/{{tittle}}/{{_id}}" class="thumb__button">View more</a>
+                <!--Add to car-->
+                <button class="product__button" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
+                data-price="{{ price }}"> Add to car </button>
             </div>
             {{/each}}
         </main>
     </section>
 
-<script src="/scripts/client.js"></script>
+    <script src="/scripts/client.js"></script>
 </body>
 
 <!--filtros

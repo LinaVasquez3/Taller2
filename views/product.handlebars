@@ -17,7 +17,16 @@
         <p class="product__description"> {{ description }} </p>
         <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
         <p>{{ price }}</p>
-        <a href="/product/{{tittle}}/{{id}}" class="product__button">Add to bag</a>
+        <!--<a href="/product/{{tittle}}/{{id}}" class="product__button">Add to bag</a>-->
+
+    <!--guardar información-->
+        <span class="product-bot">
+            <button class="product__button" 
+            data-img="{{ img }}"
+            data-id="{{ _id }}"
+            data-name="{{ tittle }}"
+            data-price="{{ price }}"> Add to car </button>
+        </span>
 
         <!--Price-->
         {{#if freeShipping}}
