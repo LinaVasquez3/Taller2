@@ -69,7 +69,7 @@ function configureRoutes(app, db) {
         // Get the products collection
         const collection = db.collection('products');
         // Find some products
-        collection.find( filters ).sort(sortings).toArray(function (err, docs) {
+        collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
 
             //objeto contexto
@@ -90,7 +90,7 @@ function configureRoutes(app, db) {
         //error 404
         if (req.params.id.length != 24) {
             res.redirect('/404');
-            return
+            return;
         }
 
         const filter = {
@@ -101,7 +101,7 @@ function configureRoutes(app, db) {
 
         const collection = db.collection('products');
         // Find some products
-        collection.find( filter ).toArray(function (err, docs) {
+        collection.find(filter).toArray(function (err, docs) {
             assert.equal(err, null);
 
             //FREESHIPING
@@ -117,7 +117,7 @@ function configureRoutes(app, db) {
             //REDIRECCIONAR AL USUARIO A PAGINA 404
             if (docs.length == 0) {
                 res.redirect('/404');
-                return
+                return;
             }
 
             //objeto contexto
@@ -132,25 +132,41 @@ function configureRoutes(app, db) {
     });
 
     //CHECKOUT
-
     //mostrar informacion la página de checkout al usario.
     app.get('/checkout', function (req, res) {
-        console.log('hola en checkout');
-        //res.send('Página de checkout');
-
-        //objeto contexto checkout
+        //solo se define si hay un errror
+        console.log(req.query.error);
+        //contexto- si la ruta viene con error
         var context = {
-
+            showError: req.query.error,
         }
-        res.render('checkout');
+        //res.send('Página de checkout');
+        res.render('checkout', context);
     });
 
     //recibir informacion la página de checkout.
     app.post('/checkout', function (req, res) {
-        res.send('test');
-        console.log('req.body');
+        console.log(req.body);
+
+        req.body.creation_date = new Date();
+
+        //inputs requeridos
+        if (!req.body.firstname || !req.body.address) {
+            //res.send('error');
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
+
+        const collection = db.collection('orders');
+        collection.insertOne(req.body);
+        res.redirect('/confirmation');
     });
 
+    //Pagina de confirmación.
+    app.get('/confirmation', function (req, res) {
+        res.send('Gracias por tu compra');
+    });
 
     //Abrir la página de error 404 de la página.
     app.get('/404', function (req, res) {
