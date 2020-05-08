@@ -3,7 +3,7 @@
 //shop picture
 .shopPic{
     
-    &shopPic__img {
+    &__imagen {
         width: 100%;
     }
 
@@ -47,34 +47,119 @@
     }
 }
 
+//contenido de los productos - filtros, ordenamientos y productos
+.content_product{
+    display: flex;
+    padding: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 0px;
+}
+
+
 //lista de productos
 .productList{
     display: flex;
+    width: 100%;
+    //max-width: 75%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 0px 0px 20px;
+
 }
 
 //especificaciones del producto
 .thumb{
-    border: 3px solid rgb(166, 236, 166);
+    margin-left: 8px;
+    margin-bottom: 20px;
+    width: 20%;
 
-    &__img {
-        width: 80px;
-    }
-    &__button{
-        width: 350px;
-        height: 35px;
-        margin: 0px 0px 10px 0px;
+    &__tittle{
+        margin: 0px 0px 0px 0px;
         line-height: 35px;
         font-family: $primary-font;
-        border: 2px solid $kactu-color;
-        text-align: center;
-        font-size: 14px; 
-        cursor: pointer;
-        text-decoration: none;
+        font-size: 22px; 
+        
     }
-    &__button:hover{
-        background: rgb(230, 235, 250);
+
+    &__name{
+        margin: 0px 0px 0px 0px;
+        //line-height: 35px;
+        font-family: $primary-font;
+        font-size: 16px; 
+        font-weight: 250;
+        line-height: 27px;
+        font-style: normal;
     }
+
+    &__number{
+        margin: -26px 0px 0px 0px;
+        line-height: 35px;
+        font-family: $primary-font;
+        font-size: 16px; 
+        line-height: 27px;
+        font-style: normal;
+        text-align: right;
+    }
+
+    &__rating{
+        margin: 0px 0px 0px 0px;
+        //line-height: 35px;
+        font-family: $primary-font;
+        font-size: 16px; 
+        line-height: 27px;
+        font-style: normal;
+    }
+
+
+    &__img {
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+
+    }
+    
+    &__vibu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &View{
+            width: 40%;
+            height: 100%;
+            margin-top: 1.5px;
+            line-height: 25px;
+            font-family: $primary-font;
+            border: 1.5px solid $kactu-color;
+            text-align: center;
+            font-size: 14px; 
+            cursor: pointer;
+            & a{
+                text-decoration: none;
+            }
+            
+        }
+        &View:hover{
+            background: rgb(230, 235, 250);
+        }    
+        &Button{
+            width: 40%;
+            height: 18%;
+            line-height: 25px;
+            font-family: $primary-font;
+            border: 1.5px solid $kactu-color;
+            color: $kactu-color;
+            background-color: rgb(247, 247, 247);
+            text-align: center;
+            font-size: 14px; 
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
 }
+
+//ordfil - ordenamientos y filtros a la izquierda
+
 
 /*.table{
     td{

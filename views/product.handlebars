@@ -6,39 +6,39 @@
         <h1 class="product__tittle"> {{ tittle }} </h1>
     </header>-->
 
-    <section class="product__section">
-        <!--<h2 class="product__name"> {{ name }}</h2>
-        <img src="{{ img }}" alt="" srcset="">
-        <p class="product__description"> {{ description }} </p>-->
+    <section class="product">
+        <div class="product__img">
+            <img class="product__imgBi" src="{{ img }}" alt="">
+            <div class="product__imgPe">
+                <img class="product__img2" src="{{ img2 }}" alt="">
+                <img class="product__img3" src="{{ img3 }}" alt="">
+            </div>
+        </div>
+        <div class="product2">
+            <h1 class="product2__tittle"> {{ tittle }} </h1>
+            <h3 class="product2__name"> {{ name }}</h3>
+            <p class="product2__description"> {{ description }} </p>
+            <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
+            <p class="productr2__description2"> {{ description2 }}</p>
+            <p>{{ price }}</p>
+            <!--guardar información-->
+            <span class="product-bot">
+                <button class="thumb__button" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
+                    data-price="{{ price }}"> Add to car </button>
+            </span>
+            <!--Price-->
+            {{#if freeShipping}}
+            <!--si tiene envio gratis se muestra esto-->
+            <h3>Envio gratis</h3>
+            {{#each freeShipping}}
+            <p>{{ this }}</p>
+            {{/each}}
+            <!--si no tiene envio gratis se muestra esto-->
+            {{else}}
+            <h3>Envio a cobro</h3>
+            {{/if}}
+        </div>
 
-        <img class="product__img" src="{{ img }}" alt="">
-        <h1 class="product__tittle"> {{ tittle }} </h1>
-        <h3 class="product__name"> {{ name }}</h3>
-        <p class="product__description"> {{ description }} </p>
-        <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
-        <p>{{ price }}</p>
-        <!--<a href="/product/{{tittle}}/{{id}}" class="product__button">Add to bag</a>-->
-
-    <!--guardar información-->
-        <span class="product-bot">
-            <button class="product__button" 
-            data-img="{{ img }}"
-            data-id="{{ _id }}"
-            data-name="{{ tittle }}"
-            data-price="{{ price }}"> Add to car </button>
-        </span>
-
-        <!--Price-->
-        {{#if freeShipping}}
-        <!--si tiene envio gratis se muestra esto-->
-        <h3>Envio gratis</h3>
-        {{#each freeShipping}}
-        <p>{{ this }}</p>
-        {{/each}}
-        <!--si no tiene envio gratis se muestra esto-->
-        {{else}}
-        <h3>Envio a cobro</h3>
-        {{/if}}
 
     </section>
 

@@ -9,21 +9,8 @@
 <body>
 
     <section class="shopPic">
-        <img class="shopPic__imagen" src="/img/img2/shop.jpg" alt="">
+        <img class="shopPic__imagen" src="/img/img2/shop.jpeg" alt="">
     </section>
-
-
-    <!--Filtros-->
-    <nav>
-        Ordenamientos
-        <select>
-            <!--Menor-->
-            <option value="" disabled="true" selected="true">Choose an option</option>
-            <option value="16">Less than 16</option>
-            <option value="20">Less than 20</option>
-        </select>
-    </nav>
-
 
     <!--shop-->
     <section class="shop">
@@ -34,29 +21,50 @@
         </div>
     </section>
 
-    <!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
-    <section>
-        <h2>Lista de productos</h2>
-        <main class="productList">
-            {{#each products}}
-            <!--recorrer el arreglo de producto-->
-            <!--Un div es un producto-->
-            <!--para que se vea la imagen y el precio de cada producto-->
-            <div class="thumb">
-                <img class="thumb__img" src="{{ img }}" alt="">
-                <h1 class="thumb__tittle"> {{ tittle }} </h1>
-                <h3 class="thumb__name"> {{ name }}</h3>
-                <p>{{ price }}</p>
-                <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
-                <a href="/product/{{tittle}}/{{_id}}" class="thumb__button">View more</a>
-                <!--Add to car-->
-                <button class="product__button" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
-                data-price="{{ price }}"> Add to car </button>
-            </div>
-            {{/each}}
-        </main>
-    </section>
+    <!--Lista de productos y ordenamientos-->
 
+    <section class="content_product">
+
+        <!--Orders-->
+        <nav class="ordfil">
+            Ordenamientos
+            <select class="orders__class">
+                <!--Menor-->
+                <option value="" disabled="true" selected="true">Choose an option</option>
+                <option value="16">Less than 16</option>
+                <option value="20">Less than 20</option>
+            </select>
+        </nav>
+
+
+        <!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
+        <section>
+            <h2>Lista de productos</h2>
+            <main class="productList">
+                {{#each products}}
+                <!--recorrer el arreglo de producto-->
+                <!--Un div es un producto-->
+                <!--para que se vea la imagen y el precio de cada producto-->
+                <div class="thumb">
+                    <img class="thumb__img" src="{{ img }}" alt="">
+                    <h1 class="thumb__tittle"> {{ tittle }} </h1>
+                    <h3 class="thumb__name"> {{ name }}</h3>
+                    <p class="thumb__rating">{{ rating }}</p>
+                    <p class="thumb__number">{{ price }}</p>
+                    <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
+                    <div class="thumb__vibu">
+                        <div class="thumb__vibuView">
+                            <a href="/product/{{tittle}}/{{_id}}">View more</a>
+                        </div>
+                        <!--Add to car-->
+                        <button class="thumb__vibuButton" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
+                            data-price="{{ price }}"> Add to car </button>
+                    </div>
+                </div>
+                {{/each}}
+            </main>
+        </section>
+    </section>
     <script src="/scripts/client.js"></script>
 </body>
 

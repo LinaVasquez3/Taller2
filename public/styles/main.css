@@ -1616,29 +1616,87 @@ body, html {
   }
 }
 
-.product__tittle {
-  font-size: 30px;
-  color: lightcoral;
-  background: lightgray;
-  width: 500px;
-  height: 40px;
-}
-
-.product__section {
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: lightsalmon;
   width: 100%;
   height: auto;
 }
 
-.product {
-  background: lightsteelblue;
+.product__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px 50px;
 }
 
-.product--with-options {
-  background: limegreen;
+.product__imgBi {
+  width: 100%;
+  height: 60%;
 }
 
-.shopPicshopPic__img {
+.product__imgPe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.product__imgPe img {
+  width: 40%;
+}
+
+/*izquierda
+.izq{    
+    display: flex;
+}*/
+.product2 {
+  padding: 0px 50px;
+}
+
+.product2__tittle {
+  font-size: 30px;
+  color: #282727;
+  background: lightgray;
+  margin: 450px 0px 0px 0px;
+  width: auto;
+  height: auto;
+  line-height: 35px;
+  font-family: "Poppins";
+  font-size: 45px;
+}
+
+.product2__name {
+  margin: 10px 0px 0px 0px;
+  font-family: "Poppins";
+  font-size: 28px;
+  font-weight: 250;
+  line-height: 27px;
+  font-style: normal;
+}
+
+.product2__description {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: #282727;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.shopPic__imagen {
   width: 100%;
 }
 
@@ -1691,35 +1749,121 @@ body, html {
   }
 }
 
+.content_product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 0px 0px 30px;
+  margin: 0px 0px 0px 0px;
+}
+
 .productList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0px 0px 0px 20px;
 }
 
 .thumb {
-  border: 3px solid #a6eca6;
+  margin-left: 8px;
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+.thumb__tittle {
+  margin: 0px 0px 0px 0px;
+  line-height: 35px;
+  font-family: "Poppins";
+  font-size: 22px;
+}
+
+.thumb__name {
+  margin: 0px 0px 0px 0px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 250;
+  line-height: 27px;
+  font-style: normal;
+}
+
+.thumb__number {
+  margin: -26px 0px 0px 0px;
+  line-height: 35px;
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 27px;
+  font-style: normal;
+  text-align: right;
+}
+
+.thumb__rating {
+  margin: 0px 0px 0px 0px;
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 27px;
+  font-style: normal;
 }
 
 .thumb__img {
-  width: 80px;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
 }
 
-.thumb__button {
-  width: 350px;
-  height: 35px;
-  margin: 0px 0px 10px 0px;
-  line-height: 35px;
+.thumb__vibu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.thumb__vibuView {
+  width: 40%;
+  height: 100%;
+  margin-top: 1.5px;
+  line-height: 25px;
   font-family: "Poppins";
-  border: 2px solid #434F73;
+  border: 1.5px solid #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.thumb__vibuView a {
+  text-decoration: none;
+}
+
+.thumb__vibuView:hover {
+  background: #e6ebfa;
+}
+
+.thumb__vibuButton {
+  width: 40%;
+  height: 18%;
+  line-height: 25px;
+  font-family: "Poppins";
+  border: 1.5px solid #434F73;
+  color: #434F73;
+  background-color: #f7f7f7;
   text-align: center;
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-}
-
-.thumb__button:hover {
-  background: #e6ebfa;
 }
 
 /*.table{
