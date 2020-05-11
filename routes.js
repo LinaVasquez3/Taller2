@@ -150,8 +150,45 @@ function configureRoutes(app, db) {
 
         req.body.creation_date = new Date();
 
+
+        //direccion de casa
         //inputs requeridos
-        if (!req.body.firstname || !req.body.address) {
+        if (!req.body.adressemail) {
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
+        //name and last name
+        //inputs requeridos
+        if (!req.body.firstname || !req.body.lastname) {
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
+        //direccion de casa
+        //inputs requeridos
+        if (!req.body.adress) {
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
+        //casa, apartamento, etc
+        //inputs requeridos
+        if (!req.body.homeadress) {
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
+        //ciudad o pais
+        //inputs requeridos
+        if (!req.body.city || !req.body.country) {
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
+        //edad y telefono
+        //inputs requeridos
+        if (!req.body.age || !req.body.phone) {
             //cuando hay un error 
             res.redirect('/checkout?error=true');
             return;

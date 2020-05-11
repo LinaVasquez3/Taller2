@@ -1,0 +1,190 @@
+
+//titulo de chekout
+.checkouta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0px;
+
+    &__square{
+        flex-direction: row;
+        justify-content: center;
+        
+        width: 700px; 
+        height: 70px; 
+        line-height: 70px;
+        border: 2px solid $kactu-color;
+        text-align: center;
+        font-family: $specially-font;
+        color: $kactu-color;
+        font-size: 32px;
+        
+            @media (max-width: $responsive) {
+                font-size: 20px;
+                width: 350px; 
+                height: 60px; 
+                line-height: 60px;
+            }
+        }
+        
+    &__line{
+        height: 10px;
+        width: 110%;
+        background-color: $primary-color;
+        border: none;
+        margin: -35px 0px 0px -30px;
+        
+        @media (max-width: $responsive) {
+            margin: -32px 0px 0px -20px;
+            height: 8px;
+        }
+    }
+}
+
+//todo de chekout
+.checkout{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //primera parte
+    &__body{
+    
+        &Name{
+            font-family: $primary-font;
+            border: none;
+            color: $decoration-color;
+        
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+            }
+        }
+        &Body1{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            justify-content: space-between;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+        }
+
+    }
+
+    //SEGUNDA PARTE DEL CHEKOUT
+    &__s{
+        &Name{
+            font-family: $primary-font;
+            border: none;
+            color: $decoration-color;
+        
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+            }
+        }
+        &Body1{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+        }
+        &Body2{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+        }
+        &Body3{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+        }
+        &Body4{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+        }
+        &Body5{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+        }
+
+            /*label
+            &__body1{
+            font-family: $primary-font;
+            border: none;
+            //margin: 0px 25px 25px 0px;
+            //padding: 0px 20px;
+            color: $decoration-color;
+            
+                @media (max-width: $responsive) {
+                    width: 325px;
+                    margin: 0px 0px 25px 0px;
+                }
+            
+            }
+            //input
+            &__body2{
+                font-family: $primary-font;
+                border: 3px black;
+                //margin: 0px 25px 25px 0px;
+                //padding: 0px 20px;
+                color: $decoration-color;
+                
+                @media (max-width: $responsive) {
+                    width: 325px;
+                    margin: 0px 0px 25px 0px;
+                }
+                
+            }
+        }*/
+
+    }
+}

@@ -1,13 +1,8 @@
 <!--CLASE DE LA TIENDA-->
 
-<!--Imagen de header
-<header class="shopHeader">
-    <img class="shopHeader__img" src="{{ img }}" alt="">
-</header>-->
-
-
 <body>
 
+    {{!-- IMAGEN  --}}
     <section class="shopPic">
         <img class="shopPic__imagen" src="/img/img2/shop.jpeg" alt="">
     </section>
@@ -21,25 +16,43 @@
         </div>
     </section>
 
-    <!--Lista de productos y ordenamientos-->
-
+    {{!-- FILTROS --}}
     <section class="content_product">
 
-        <!--Orders-->
-        <nav class="ordfil">
-            Ordenamientos
-            <select class="orders__class">
-                <!--Menor-->
-                <option value="" disabled="true" selected="true">Choose an option</option>
-                <option value="16">Less than 16</option>
-                <option value="20">Less than 20</option>
-            </select>
-        </nav>
+        <section class="filters">
+            Filtros
+            <!--<nav class="filters__product">
+                Product
+                <select class="filters__product1">
+                    <option value="" disabled="true" selected="true">Choose an option</option>
+                    <option value="shadows">Shadows</option>
+                    <option value="lips">Lips</option>
+                    <option value="skin">Skin</option>
+                    <option value="mascara">Mascara</option>
+                </select>
+            </nav>-->
+
+        </section>
 
 
+        {{!-- PRODUCTOS --}}
         <!--PARA QUE SE VEAN LOS PRODUCTOS EN LA TIENDA-->
         <section>
-            <h2>Lista de productos</h2>
+            <!--Orders-->
+            <nav class="orders">
+                Ordinances
+                <select class="orders__class">
+                    <!--Menor-->
+                    <option value="" disabled="true" selected="true">Choose an option</option>
+                    <option value="16">Less than 16</option>
+                    <option value="20">Less than 20</option>
+                    <hr class="orders__classLineProduct">
+                </select>
+                <br>
+
+            </nav>
+            {{!-- lista de productos --}}
+            <h2 class="list">List of products</h2>
             <main class="productList">
                 {{#each products}}
                 <!--recorrer el arreglo de producto-->
@@ -57,8 +70,8 @@
                             <a href="/product/{{tittle}}/{{_id}}">View more</a>
                         </div>
                         <!--Add to car-->
-                        <button class="thumb__vibuButton" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
-                            data-price="{{ price }}"> Add to car </button>
+                        <button class="thumb__vibuButton" data-img="{{ img }}" data-id="{{ _id }}"
+                            data-name="{{ tittle }}" data-price="{{ price }}"> Add to car </button>
                     </div>
                 </div>
                 {{/each}}

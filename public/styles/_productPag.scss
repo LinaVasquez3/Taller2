@@ -1,22 +1,26 @@
 .product{
     display: flex;
-    background: lightsalmon;
+    background: #ffffff;
     width: 100%;
     height: auto;  
     &__img{
-        display: flex;
+        padding: 70px 50px 20px 100px;
         flex-direction: column;
-        padding: 50px 50px;
         &Bi {
-            width: 100%;
+            width: 133%;
             height: 60%;
         }
         &Pe{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             margin-top: 20px;
+            margin-left: 130px;
+            
             & img{
-                width: 40%;
+                width: 55%;
+            }
+            &__img2{
+                z-index: -1;
             }
         }
     }
@@ -29,17 +33,15 @@
 
 //derecha
 .product2{
-    padding: 0px 50px;
+    padding: 304px 50px 0px 228px;
     &__tittle{
         font-size: 30px;
         color: $texto-color;
-        background: lightgray;
-        margin: 450px 0px 0px 0px;
+        margin: 32px 0px 0px 0px;
         width:auto;
         height: auto;
         line-height: 35px;
         font-family: $primary-font;
-        font-size: 45px; 
     }
 
     &__name{
@@ -61,4 +63,97 @@
         color: $texto-color;
         justify-content: end;    
     }
+
+   /* &__block{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 125px 0px 135px;
+
+        
+    }*/
+            .product2__blockDescription2{
+                margin: 23px 0px 0px 135px;
+                font-family: $primary-font;
+                font-style: normal;
+                font-size: 17px;
+                line-height: 37px;   
+                font-style: normal;
+                font-weight: 250;
+                color: $texto-color;
+            }
+            .product2__blockPrice{
+                margin: -38px 144px 0px 0px;
+                font-family: $primary-font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 42px;   
+                color: $texto-color;
+                text-align: right;
+            }
+
+
+    &__symbol{
+        display: flex;
+        margin: 7px 0px 0px 155px;
+        
+        &Rest{
+        justify-content: left;
+        background: #ffffff;
+        border: none;
+        color: $kactu-color;
+        //border: 1.5px solid $kactu-color;
+        //border-radius: 11px;
+        }
+        &Sum{
+        margin: 0px 0px 0px 350px;
+        background: #ffffff;
+        color: $kactu-color;
+        border: none;
+        //border: 1.5px solid $kactu-color;
+       // border-radius: 11px;
+
+        }
+    }
+}
+.line{
+    height: 2px;
+    width: 60%;
+    background-color:$kactu-color;
+    border: none;
+    margin: 0px 0px 0px 136px;
+    margin-top: 0px;
+}
+
+.line2{
+    height: 2px;
+    width: 60%;
+    background-color:$kactu-color;
+    border: none;
+    margin: 0px 0px 0px 136px;
+    margin-top: 8px;
+}
+
+//boton
+.thumb__button{
+             width: 60%;
+            height: 4%;
+            line-height: 25px;
+            font-family: $primary-font;
+            border: 1.5px solid $kactu-color;
+            color: #ffffff;
+            background-color: $kactu-color;
+            text-align: center;
+            font-size: 14px; 
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px 0px 0px 135px;
+}
+
+.shipping{
+    font-family: $primary-font;
+    color: $kactu-color;
+    font-size: 20px;
+    line-height: 52px;   
+    text-align: center;
 }
