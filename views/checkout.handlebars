@@ -18,54 +18,48 @@
 {{/if}}
 
 <section class="checkout">
-    <div class="checkout__body">
-        <h1 class="checkout__bodyName">Contact Information</h1>
-        <form action="/checkout" method="POST">
+    <form class="checkout__form"action="/checkout" method="POST">
+        <div class="checkout__body">
+            <h1 class="checkout__bodyName">Contact Information</h1>
             <div class="checkout__bodyBody1">
                 {{!-- direccion de email --}}
                 <label class="checkout__body1" for="Adress Email">
                     Adress Email
-                    <input class="checkout__body2" placeholder="Adress Email" name="adressemail">
                 </label>
+                <input type="text" class="checkout__body2" placeholder="Adress Email" name="adressemail">
             </div>
-        </form>
-    </div>
-    {{!-- segunda parte del checkou --}}
-    <div class="checkout__s">
-        <h1 class="checkout__sName">Shipping Adress</h1>
-        {{!-- name and last name --}}
-        <form action="/checkout" method="POST">
+        </div>
+        {{!-- segunda parte del checkou --}}
+        <div class="checkout__s">
+            <h1 class="checkout__sName">Shipping Adress</h1>
+            {{!-- name and last name --}}
             <div class="checkout__sBody1">
                 <label for="Name">
                     Name
-                    <input placeholder="Name" name="firstname">
                 </label>
+                <input placeholder="Name" name="firstname">
                 <label for="Surname">
                     Surname
-                    <input placeholder="Surname" name="lastname" required="true">
                 </label>
+                <input placeholder="Surname" name="lastname" required="true">
             </div>
-        </form>
-        {{!-- dirección de casa --}}
-        <form action="/checkout" method="POST">
+
+            {{!-- dirección de casa --}}
             <div class="checkout__sBody2">
                 <label for="Adress">
                     Adress
-                    <input placeholder="Adress" name="adress">
                 </label>
+                <input placeholder="Adress" name="adress">
             </div>
-        </form>
-        {{!-- casa, apartamento --}}
-        <form action="/checkout" method="POST">
+            {{!-- casa, apartamento --}}
             <div class="checkout__sBody3">
                 <label for="Home Adress">
                     Home Adress
-                    <input placeholder="Apartament, suit, home" name="homeadress">
                 </label>
+                <input placeholder="Apartament, suit, home" name="homeadress">
             </div>
-        </form>
-        {{!-- ciudad y pais --}}
-        <form action="/checkout" method="POST">
+
+            {{!-- ciudad y pais --}}
             <div class="checkout__sBody4">
                 <label for="City">
                     City
@@ -73,23 +67,26 @@
                 </label>
                 <label for="Country">
                     Country
-                    <input placeholder="Country" name="country" required="true">
                 </label>
+                <input placeholder="Country" name="country" required="true">
             </div>
-        </form>
-        {{!-- edad y telefono --}}
-        <form action="/checkout" method="POST"></form>
-        <div class="checkout__sBody5">
-            <label for="Age">
-                Age (optional)
-                <input placeholder="Age" name="age" type="number">
-            </label>
-            <label for="Phone">
-                Phone (optional)
-                <input placeholder="Phone" name="phone" type="number">
-            </label>
+
+            {{!-- edad y telefono --}}
+            <div class="checkout__sBody5">
+                <div class="checkout__sBody5s1">
+                    <label for="Age">
+                        Age (optional)
+                    </label>
+                    <input placeholder="Age" name="age" type="number">
+                </div>
+                <div class="checkout__s2">
+                    <label for="Phone">
+                        Phone (optional)
+                    </label>
+                    <input placeholder="Phone" name="phone" type="number">
+                </div>
+            </div>
+            <button>Send</button>
         </div>
-        <button>Send</button>
-        </form>
-    </div>
+    </form>
 </section>

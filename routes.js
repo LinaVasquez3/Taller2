@@ -20,6 +20,87 @@ function configureRoutes(app, db) {
             $and: []
         }
 
+        //name
+        if (req.query.name) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                name: {
+                    $eq: req.query.name
+                }
+            });
+        }
+
+        //rating1
+        //Buscar productos filtrados por rating mayor
+        if (req.query.rating_1) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $eq: parseInt(req.query.rating_1)
+                }
+
+            });
+        }
+
+        //rating2
+        //Buscar productos filtrados por rating mayor
+        if (req.query.rating_2) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $eq: parseInt(req.query.rating_2)
+                }
+
+            });
+        }
+
+        //rating3
+        //Buscar productos filtrados por rating mayor
+        if (req.query.rating_3) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $eq: parseInt(req.query.rating_3)
+                }
+
+            });
+        }
+        
+        //rating4
+        //Buscar productos filtrados por rating mayor
+        if (req.query.rating_4) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $eq: parseInt(req.query.rating_4)
+                }
+
+            });
+        }
+        
+        //rating5
+        //Buscar productos filtrados por rating mayor
+        if (req.query.rating_5) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $eq: parseInt(req.query.rating_5)
+                }
+
+            });
+        }
+
+
+        //freeShipping
+        //Buscar productos filtrados por FreeShippingApproved
+        if (req.query.priceFreeShipping) {
+            //crear  arreglo filtrado
+            filters.price = {
+                $gte: parseInt(req.query.priceFreeShipping)
+            }
+        }
+
+
         //Buscar productos filtrados por precio-menor
         if (req.query.price_lt) {
             filters.$and.push({

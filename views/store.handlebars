@@ -16,21 +16,62 @@
         </div>
     </section>
 
-    {{!-- FILTROS --}}
     <section class="content_product">
 
-        <section class="filters">
-            Filtros
-            <!--<nav class="filters__product">
-                Product
-                <select class="filters__product1">
-                    <option value="" disabled="true" selected="true">Choose an option</option>
-                    <option value="shadows">Shadows</option>
-                    <option value="lips">Lips</option>
-                    <option value="skin">Skin</option>
-                    <option value="mascara">Mascara</option>
-                </select>
-            </nav>-->
+        {{!-- FILTROS --}}
+        <section class="filterside">
+            <h2 class="filterside__name">Filters</h2>
+
+            {{!-- NAME --}}
+            <h3 class="filterside__typeProduct">Type</h3>
+            <ul class="filterside__ul">
+                <a class="filterside__link" href="?name=Shine Shadows">
+                    <li>
+                        Shine Shadows
+                    </li>
+                </a>
+                <a class="filterside__link" href="?name=Glow Lips">
+                    <li>
+                        Glow Lips
+                    </li>
+                </a><a class="filterside__link" href="?name=Radiate Skin">
+                    <li>
+                        Radiate Skin
+                    </li>
+                </a><a class="filterside__link" href="?name=Light Mascara">
+                    <li>
+                        Light Mascara
+                    </li>
+                </a>
+            </ul>
+
+            {{!-- RATING --}}
+            <h3 class="filterside__titlerating">Rating</h3>
+            <ul class="filterside__ul">
+                <a class="filterside__link" href="?rating_1=1">
+                    <li>1 Star</li>
+                </a>
+                <a class="filterside__link" href="?rating_2=2">
+                    <li>2 Stars</li>
+                </a>
+                <a class="filterside__link" href="?rating_3=3">
+                    <li>3 Stars</li>
+                </a>
+                <a class="filterside__link" href="?rating_4=4">
+                    <li>4 Stars</li>
+                </a>
+                <a class="filterside__link" href="?rating_5=5">
+                    <li>5 Stars</li>
+                </a>
+            </ul class="filterside__ul">
+
+            {{!-- FREESHIPPING --}}
+            <h3 class="filterside__titlefree">Advantages</h3>
+            <ul class="filterside__ul">
+                <a class="filterside__link" href="?priceFreeShipping=16">
+                    <li>FreeShipping</li>
+                </a>
+            </ul>
 
         </section>
 
@@ -62,7 +103,7 @@
                     <img class="thumb__img" src="{{ img }}" alt="">
                     <h1 class="thumb__tittle"> {{ tittle }} </h1>
                     <h3 class="thumb__name"> {{ name }}</h3>
-                    <p class="thumb__rating">{{ rating }}</p>
+                    <p class="thumb__rating">{{ rating }} Stars </p>
                     <p class="thumb__number">{{ price }}</p>
                     <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
                     <div class="thumb__vibu">
