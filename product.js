@@ -11,7 +11,7 @@ const products = [
     //1 - Shadows
     {
         tittle: 'Uh-Huh Honey',
-        name: 'Shine Shadows',
+        name: 'Shadows',
         rating: 4,
         img: '/img/img2/shadows/shadows1.jpg',
         img2: '/img/img2/shadows/shadows1a.jpg',
@@ -43,7 +43,7 @@ const products = [
     //2 - Shadows
     {
         tittle: 'Strawberry Shake',
-        name: 'Shine Shadows',
+        name: 'Shadows',
         rating: 5,
         img: '/img/img2/shadows/shadows2.jpg',
         img2: '/img/img2/shadows/shadows2a.jpg',
@@ -58,7 +58,7 @@ const products = [
     //3 - Shadows
     {
         tittle: 'Mar',
-        name: 'Shine Shadows',
+        name: 'Shadows',
         rating: 5,
         img: '/img/img2/shadows/shadows3.jpg',
         img2: '/img/img2/shadows/shadows3a.jpg',
@@ -73,7 +73,7 @@ const products = [
     //4 - Shadows
     {
         tittle: 'Lilac you a lot',
-        name: 'Shine Shadows',
+        name: 'Shadows',
         rating: 2,
         img: '/img/img2/shadows/shadows4.jpg',
         img2: '/img/img2/shadows/shadows4a.jpg',
@@ -86,7 +86,7 @@ const products = [
     //5 - Shadows
     {
         tittle: 'Just my luck',
-        name: 'Shine Shadows',
+        name: 'Shadows',
         rating: 3,
         img: '/img/img2/shadows/shadows5.jpg',
         img2: '/img/img2/shadows/shadows5a.jpg',
@@ -104,7 +104,7 @@ const products = [
     //6 - lips
     {
         tittle: 'Drop a hint',
-        name: 'Glow Lips',
+        name: 'Lips',
         rating: 3,
         img: '/img/img2/lips/lips1.jpg',
         img2: '/img/img2/lips/lips1a.jpg',
@@ -118,7 +118,7 @@ const products = [
     //7 - lips
     {
         tittle: 'What the fluff',
-        name: 'Glow Lips',
+        name: 'Lips',
         rating: 4,
         img: '/img/img2/lips/lips2.jpg',
         img2: '/img/img2/lips/lips2a.jpg',
@@ -131,7 +131,7 @@ const products = [
     //8 - lips
     {
         tittle: 'Powder Room',
-        name: 'Glow Lips',
+        name: 'Lips',
         rating: 5,
         img: '/img/img2/lips/lips3.jpg',
         img2: '/img/img2/lips/lips3a.jpg',
@@ -144,7 +144,7 @@ const products = [
     //9 - lips
     {
         tittle: 'Lofty Goals',
-        name: 'Glow Lips',
+        name: 'Lips',
         rating: 2,
         img: '/img/img2/lips/lips4.jpg',
         img2: '/img/img2/lips/lips4a.jpg',
@@ -157,7 +157,7 @@ const products = [
     //10 - lips
     {
         tittle: 'Kiss the dusk',
-        name: 'Glow Lips',
+        name: 'Lips',
         rating: 1,
         img: '/img/img2/lips/lips5.jpg',
         img2: '/img/img2/lips/lips5a.jpg',
@@ -172,7 +172,7 @@ const products = [
     //11 - skin
     {
         tittle: 'Avocuddle',
-        name: 'Radiate Skin',
+        name: 'Skin',
         rating: 4,
         img: '/img/img2/skin/skin1.jpg',
         img2: '/img/img2/skin/skin1a.jpg',
@@ -185,7 +185,7 @@ const products = [
     //12 - skin 
     {
         tittle: 'Multi-Maske',
-        name: 'Radiate Skin',
+        name: 'Skin',
         rating: 3,
         img: '/img/img2/skin/skin2.jpg',
         img2: '/img/img2/skin/skin2a.jpg',
@@ -199,7 +199,7 @@ const products = [
     //13 - skin 
     {
         tittle: 'A-ha moment',
-        name: 'Radiate Skin',
+        name: 'Skin',
         rating: 2,
         img: '/img/img2/skin/skin3.jpg',
         img2: '/img/img2/skin/skin3a.jpg',
@@ -212,7 +212,7 @@ const products = [
     //14 - skin 
     {
         tittle: 'The daily face',
-        name: 'Radiate Skin',
+        name: 'Skin',
         rating: 1,
         img: '/img/img2/skin/skin4.jpg',
         img2: '/img/img2/skin/skin4a.jpg',
@@ -225,7 +225,7 @@ const products = [
     //15 - skin
     {
         tittle: 'Multi-masking Mask',
-        name: 'Radiate Skin',
+        name: 'Skin',
         rating: 5,
         img: '/img/img2/skin/skin5.jpg',
         img2: '/img/img2/skin/skin5a.jpg',
@@ -241,7 +241,7 @@ const products = [
     //16 - Mascara
     {
         tittle: 'Lovers Coral',
-        name: 'Light Mascara',
+        name: 'Mascara',
         rating: 4,
         img: '/img/img2/mascara/mascara1.jpg',
         img2: '/img/img2/mascara/mascara1a.jpg',
@@ -254,7 +254,7 @@ const products = [
     //17 - Mascara 
     {
         tittle: 'Blue ya mind',
-        name: 'Light Mascara',
+        name: 'Mascara',
         rating: 3,
         img: '/img/img2/mascara/mascara2.jpg',
         img2: '/img/img2/mascara/mascara2a.jpg',
@@ -268,7 +268,7 @@ const products = [
     //18 - Mascara 
     {
         tittle: 'Purple prose',
-        name: 'Light Mascara',
+        name: 'Mascara',
         rating: 1,
         img: '/img/img2/mascara/mascara3.jpg',
         img2: '/img/img2/mascara/mascara3a.jpg',
@@ -281,7 +281,7 @@ const products = [
     //19 - Mascara 
     {
         tittle: 'Black on black',
-        name: 'Light Mascara',
+        name: 'Mascara',
         rating: 2,
         img: '/img/img2/mascara/mascara4.jpg',
         img2: '/img/img2/mascara/mascara4a.jpg',
@@ -295,7 +295,7 @@ const products = [
     //20 - mascara
     {
         tittle: 'Bff lover',
-        name: 'Light Mascara',
+        name: 'Mascara',
         rating: 5,
         img: '/img/img2/mascara/mascara5.jpg',
         img2: '/img/img2/mascara/mascara5a.jpg',

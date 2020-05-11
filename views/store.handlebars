@@ -2,10 +2,10 @@
 
 <body>
 
-    {{!-- IMAGEN  --}}
+    {{!-- IMAGEN  
     <section class="shopPic">
         <img class="shopPic__imagen" src="/img/img2/shop.jpeg" alt="">
-    </section>
+    </section>--}}
 
     <!--shop-->
     <section class="shop">
@@ -21,27 +21,27 @@
         {{!-- FILTROS --}}
         <section class="filterside">
             <h2 class="filterside__name">Filters</h2>
-
+            <hr class="filterside__line">
             {{!-- NAME --}}
             <h3 class="filterside__typeProduct">Type</h3>
             <ul class="filterside__ul">
-                <a class="filterside__link" href="?name=Shine Shadows">
-                    <li>
-                        Shine Shadows
-                    </li>
+                <a class="filterside__link" href="?name=Shadows">
+                    <ul>
+                        Shadows
+                    </ul>
                 </a>
-                <a class="filterside__link" href="?name=Glow Lips">
-                    <li>
-                        Glow Lips
-                    </li>
-                </a><a class="filterside__link" href="?name=Radiate Skin">
-                    <li>
-                        Radiate Skin
-                    </li>
-                </a><a class="filterside__link" href="?name=Light Mascara">
-                    <li>
-                        Light Mascara
-                    </li>
+                <a class="filterside__link" href="?name=Lips">
+                    <ul>
+                        Lips
+                    </ul>
+                </a><a class="filterside__link" href="?name=Skin">
+                    <ul>
+                        Skin
+                    </ul>
+                </a><a class="filterside__link" href="?name=Mascara">
+                    <ul>
+                        Mascara
+                    </ul>
                 </a>
             </ul>
 
@@ -49,19 +49,19 @@
             <h3 class="filterside__titlerating">Rating</h3>
             <ul class="filterside__ul">
                 <a class="filterside__link" href="?rating_1=1">
-                    <li>1 Star</li>
+                    <ul>1 Star</ul>
                 </a>
                 <a class="filterside__link" href="?rating_2=2">
-                    <li>2 Stars</li>
+                    <ul>2 Stars</ul>
                 </a>
                 <a class="filterside__link" href="?rating_3=3">
-                    <li>3 Stars</li>
+                    <ul>3 Stars</ul>
                 </a>
                 <a class="filterside__link" href="?rating_4=4">
-                    <li>4 Stars</li>
+                    <ul>4 Stars</ul>
                 </a>
                 <a class="filterside__link" href="?rating_5=5">
-                    <li>5 Stars</li>
+                    <ul>5 Stars</ul>
                 </a>
             </ul class="filterside__ul">
 
@@ -69,7 +69,7 @@
             <h3 class="filterside__titlefree">Advantages</h3>
             <ul class="filterside__ul">
                 <a class="filterside__link" href="?priceFreeShipping=16">
-                    <li>FreeShipping</li>
+                    <ul>FreeShipping</ul>
                 </a>
             </ul>
 
@@ -93,7 +93,7 @@
 
             </nav>
             {{!-- lista de productos --}}
-            <h2 class="list">List of products</h2>
+            {{!-- <h2 class="list">List of products</h2> --}}
             <main class="productList">
                 {{#each products}}
                 <!--recorrer el arreglo de producto-->
@@ -103,7 +103,7 @@
                     <img class="thumb__img" src="{{ img }}" alt="">
                     <h1 class="thumb__tittle"> {{ tittle }} </h1>
                     <h3 class="thumb__name"> {{ name }}</h3>
-                    <p class="thumb__rating">{{ rating }} Stars </p>
+                    <p class="thumb__rating">{{ rating }} Stars⭐ </p>
                     <p class="thumb__number">{{ price }}</p>
                     <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
                     <div class="thumb__vibu">
@@ -117,6 +117,7 @@
                 </div>
                 {{/each}}
             </main>
+
         </section>
     </section>
     <script src="/scripts/client.js"></script>
