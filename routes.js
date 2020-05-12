@@ -65,7 +65,7 @@ function configureRoutes(app, db) {
 
             });
         }
-        
+
         //rating4
         //Buscar productos filtrados por rating mayor
         if (req.query.rating_4) {
@@ -77,7 +77,7 @@ function configureRoutes(app, db) {
 
             });
         }
-        
+
         //rating5
         //Buscar productos filtrados por rating mayor
         if (req.query.rating_5) {
@@ -229,24 +229,16 @@ function configureRoutes(app, db) {
     app.post('/checkout', function (req, res) {
         console.log(req.body);
 
-        var{ adressemail, firstname, lastname, adress, homeadress, city, country, age, phone, products } = req.body;
+        var { adressemail, firstname, lastname, adress, homeadress, city, country, age, phone, products } = req.body;
 
         req.body.creation_date = new Date();
 
-        if ( !adressemail || !firstname || !lastname || !adress || !homeadress || !city || !country || !age || !phone || !products) {
+        if (!adressemail || !firstname || !lastname || !adress || !homeadress || !city || !country || !age || !phone || !products) {
             //cuando hay un error 
             res.redirect('/checkout?error=true');
             return;
         }
 
-        /*direccion de casa
-        //inputs requeridos
-        if (!adressemail || !products) {
-            //cuando hay un error 
-            res.redirect('/checkout?error=true');
-            return;
-        }*/
-        
         req.body.products = JSON.parse(req.body.products);
 
         const collection = db.collection('orders');
@@ -254,11 +246,29 @@ function configureRoutes(app, db) {
         res.redirect('/confirmation');
     });
 
-    //Pagina de confirmación.
+    /*Pagina de confirmación.
     app.get('/confirmation', function (req, res) {
         res.send('Gracias por tu compra');
+    });*/
+
+    //Abrir la página de  confirmation de la página.
+    app.get('/confirmation', function (req, res) {
+        console.log('hola en confirmation');
+
+        res.render('confirmation');
     });
 
+    //Abrir la página de error cart de la página.
+    app.get('/cart', function (req, res) {
+        console.log('hola en error cart');
+        //res.send('Página de cart');
+
+        //objeto contexto cart
+        var context = {
+
+        }
+        res.render('cart');
+    });
     //Abrir la página de error 404 de la página.
     app.get('/404', function (req, res) {
         console.log('hola en error 404');
@@ -270,6 +280,8 @@ function configureRoutes(app, db) {
         }
         res.render('404');
     });
+
+
 
 
 }

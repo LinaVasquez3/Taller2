@@ -303,12 +303,14 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 90px 0px 0px 0px;
 }
 
 @media (max-width: 414px) {
@@ -341,6 +343,7 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .mainheader__container .mainheader__link {
@@ -363,9 +366,7 @@ body, html {
   font-family: "Poppins";
   font-size: 14px;
   color: #747373;
-  margin: auto 20px;
-  left: 250px;
-  top: 100px;
+  margin: 0px 30px 0px 30px;
 }
 
 @media (max-width: 414px) {
@@ -378,6 +379,10 @@ body, html {
 
 .mainnav__link:hover {
   background-color: #E59E8D;
+  width: 120%;
+  height: 20%;
+  border-radius: 2px;
+  color: #ffffff;
 }
 
 .mainheader__icon {
@@ -1725,50 +1730,99 @@ body, html {
           justify-content: end;
 }
 
-.product2__blockDescription2 {
-  margin: 23px 0px 0px 135px;
+/*boton
+.thumb__vibuButton{
+            width: 60%;
+            height: 7%;
+            line-height: 25px;
+            font-family: $primary-font;
+            border: 1.5px solid $kactu-color;
+            color: #ffffff;
+            background-color: $kactu-color;
+            text-align: center;
+            font-size: 14px; 
+            cursor: pointer;
+            text-decoration: none;
+            margin: 0px 0px 0px 135px;
+            justify-self: center
+        }
+.thumb__vibuButton:hover{
+     background-color: rgb(122, 140, 192);
+ 
+}*/
+.product2__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.product2__blockText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product2__blockTextDescription2 {
+  margin: 0px 40px 0px 0px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: end;
   font-family: "Poppins";
   font-style: normal;
   font-size: 17px;
-  line-height: 37px;
-  font-style: normal;
   font-weight: 250;
   color: #282727;
 }
 
-.product2__blockPrice {
-  margin: -38px 144px 0px 0px;
+.product2__blockTextPrice {
+  margin: 0px 0px 0px 0px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
-  line-height: 42px;
   color: #282727;
   text-align: right;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
 }
 
-.thumb__button {
-  width: 60%;
-  height: 7%;
+.product2__blockAdd {
+  width: 40%;
+  height: 4%;
   line-height: 25px;
   font-family: "Poppins";
-  border: 1.5px solid #434F73;
+  border: none;
   color: #ffffff;
-  background-color: #434F73;
+  background: #434F73;
   text-align: center;
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-  margin: 0px 0px 0px 135px;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin-top: 2px;
 }
 
-.thumb__button:hover {
-  background-color: #7a8cc0;
+.product2__blockAddAdd:hover {
+  background: #7a8cc0;
 }
 
-.shipping {
+.product2__blockShipping {
   font-family: "Poppins";
   color: #434F73;
   font-size: 20px;
@@ -1986,7 +2040,7 @@ body, html {
 
 .thumb__vibuButton {
   width: 40%;
-  height: 18%;
+  height: 4%;
   line-height: 25px;
   font-family: "Poppins";
   border: none;
@@ -2624,5 +2678,126 @@ body, html {
 
 .error__404__boxImagen {
   width: 100%;
+}
+
+.confirmation__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirmation__boxImg {
+  width: 60%;
+  margin: 0px 0px 10px 0px;
+}
+
+.confirmation__boxH1 {
+  font-family: "Poppins";
+  font-size: 40px;
+  color: #E59E8D;
+}
+
+.confirmation__boxH2 {
+  margin: 0px 0px 5px 0px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: #282727;
+  margin-top: 0px;
+  text-align: center;
+  font-style: normal;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirmation__box H3 {
+  font-family: "Meddon";
+  font-size: 40px;
+  color: #E59E8D;
+  margin: 0px 0px 15px 0px;
+}
+
+.confirmation__boxH4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: #282727;
+  margin-top: 0px;
+  text-align: center;
+  font-style: normal;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirmation__boxBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px 20px 0px;
+}
+
+.confirmation__boxBoxButton {
+  width: 200px;
+  height: 4%;
+  line-height: 25px;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.confirmation__boxBoxButton:hover {
+  background: #7a8cc0;
+}
+
+.confirmation__boxBoxButt {
+  width: 200px;
+  height: 4%;
+  line-height: 25px;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.confirmation__boxBoxButt:hover {
+  background: #7a8cc0;
 }
 /*# sourceMappingURL=main.css.map */

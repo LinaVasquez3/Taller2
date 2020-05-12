@@ -4,6 +4,10 @@ function onload() {
 
     var cartBtn = document.querySelector('.cart_btn');
 
+    //nuevo boton
+    var shopCart = document.querySelector('.search__cart');
+
+
     var cartList = [];
 
 
@@ -75,6 +79,8 @@ function onload() {
             renderCart();
         });
     });
+
+    shopCart.onClick = renderCart();
 }
 
 window.addEventListener('load',onload);

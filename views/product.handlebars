@@ -19,31 +19,25 @@
             <h3 class="product2__name"> {{ name }}</h3>
             <!--BUTTON PARA QUE LLEVE A LA PANTALLA DEL PRODUCTO EN ESPECIFICO-->
             <p class="product2__description"> {{ description }} </p>
-            <p class="product2__blockDescription2"> {{ description2 }}</p>
-            {{!-- <hr class="line"> --}}
-            <p class="product2__blockPrice">{{ price }}</p>
-            <!--AUMENTAR PRODUCTOS AL CARRIO-->
-            {{!-- <div class="product2__symbol"> 
-                <button class="product2__symbolRest">-</button>
-                <button class="product2__symbolSum">+</button>
-            </div>
-            <hr class="line2">--}}
-            <!--guardar información-->
-            <span class="product-bot">
-                <button class="thumb__button" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
+            <div class="product2__block">
+                <div class="product2__blockText">
+                    <p class="product2__blockTextDescription2"> {{ description2 }}</p>
+                    <p class="product2__blockTextPrice">{{ price }}</p>
+                </div>
+                <button class="product2__blockAdd" data-img="{{ img }}" data-id="{{ _id }}" data-name="{{ tittle }}"
                     data-price="{{ price }}"> Add to car </button>
-            </span>
-            <!--Price-->
-            {{#if freeShipping}}
-            <!--si tiene envio gratis se muestra esto-->
-            <h3 class="shipping">You have free shipping!</h3>
-            {{#each freeShipping}}
-            <p>{{ this }}</p>
-            {{/each}}
-            <!--si no tiene envio gratis se muestra esto-->
-            {{else}}
-            <h3 class="shipping">You don't have free shipping!</h3>
-            {{/if}}
+                <!--Price-->
+                {{#if freeShipping}}
+                <!--si tiene envio gratis se muestra esto-->
+                <h3 class="product2__blockShipping">You have free shipping!</h3>
+                {{#each freeShipping}}
+                <p>{{ this }}</p>
+                {{/each}}
+                <!--si no tiene envio gratis se muestra esto-->
+                {{else}}
+                <h3 class="product2__blockShipping">You don't have free shipping!</h3>
+                {{/if}}
+            </div>
         </div>
 
 

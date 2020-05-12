@@ -64,30 +64,10 @@
         justify-content: end;    
     }
 }
-.product2__blockDescription2{
-    margin: 23px 0px 0px 135px;
-    font-family: $primary-font;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 37px;   
-    font-style: normal;
-    font-weight: 250;
-    color: $texto-color;
-}
 
-.product2__blockPrice{
-    margin: -38px 144px 0px 0px;
-    font-family: $primary-font;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 42px;   
-    color: $texto-color;
-    text-align: right;
-}
 
-//boton
-.thumb__button{
+/*boton
+.thumb__vibuButton{
             width: 60%;
             height: 7%;
             line-height: 25px;
@@ -102,16 +82,69 @@
             margin: 0px 0px 0px 135px;
             justify-self: center
         }
-.thumb__button:hover{
+.thumb__vibuButton:hover{
      background-color: rgb(122, 140, 192);
  
-}
+}*/
+.product2__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-.shipping{
-    font-family: $primary-font;
-    color: $kactu-color;
-    font-size: 20px;
-    line-height: 52px;   
-    text-align: center;
-    margin: 0px 0px 0px 0px;
+    &Text{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        
+        &Description2{
+            margin: 0px 40px 0px 0px;
+            align-items: left;
+            text-align: end ;
+            font-family: $primary-font;
+            font-style: normal;
+            font-size: 17px;
+            //line-height: 37px;
+            font-weight: 250;
+            color: $texto-color;
+        }
+        
+        &Price{
+            margin: 0px 0px 0px 0px;
+            font-family: $primary-font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+           // line-height: 42px;   
+            color: $texto-color;
+            text-align: right;
+            align-items: right;
+        }
+    }
+    &Add{
+        width: 40%;
+        height: 4%;
+        line-height: 25px;
+        font-family: $primary-font;
+        border: none;
+        color: #ffffff;
+        //background-color: rgb(247, 247, 247);
+        background: $kactu-color;
+        text-align: center;
+        font-size: 14px; 
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 2px;
+        &Add:hover{
+            background: rgb(122, 140, 192);
+        }
+    }
+    &Shipping{
+        font-family: $primary-font;
+        color: $kactu-color;
+        font-size: 20px;
+        line-height: 52px;   
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+    }
 }
