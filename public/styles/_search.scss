@@ -57,3 +57,21 @@
         margin-top: 10px;
     }
 }
+
+.search__cart{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 0px 0px;
+
+    &__img{
+        display: flex;
+        flex-direction: row;
+    
+    }
+}
+
+.search__car1{
+    margin: 20px 0px 0px 0px;
+    width: 8%;
+    float: right;
+}

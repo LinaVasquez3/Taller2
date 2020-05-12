@@ -7,27 +7,28 @@
     </div>
 </section>
 
-<!--Alerta de error si no llena los espacios requeridos mostrará este error-->
-{{#if showError}}
-<section>
-    <h3>Error</h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est culpa asperiores dignissimos exercitationem
-        possimus sequi fuga ut commodi doloribus libero, quasi maiores quo numquam repellat, magnam magni fugiat
-        voluptate. Assumenda?</p>
-</section>
-{{/if}}
 
 <section class="checkout">
+    <!--Alerta de error si no llena los espacios requeridos mostrará este error-->
+    {{#if showError}}
+    <div class="checkout__error">
+        <h3 class="checkout__errorName">Error</h3>
+        <p class="checkout__errorParrafo"> <strong>¡Lo sentimos! </strong></strong><br>
+            Necesitamos que llenes todos los campos <br>
+              para continuar con tu compra
+        </p>
+    </div>
+    {{/if}}
     <form class="checkout__form" action="/checkout" method="POST">
         <div class="checkout__body">
             <h1 class="checkout__bodyName">Contact Information</h1>
             <div class="checkout__bodyPls">
                 {{!-- direccion de email --}}
-                    <label for="Adress Email">
-                        Email
-                    </label>
-                    <input type="text" placeholder="Adress Email" name="adressemail">
-                
+                <label for="Adress Email">
+                    Email
+                </label>
+                <input type="text" placeholder="Adress Email" name="adressemail">
+
             </div>
         </div>
         {{!-- segunda parte del checkou --}}
@@ -84,13 +85,13 @@
             <div class="checkout__sBody5">
                 <div class="checkout__sBody5s1">
                     <label for="Age">
-                        Age (optional)
+                        Age
                     </label>
                     <input type="text" placeholder="Age" name="age" type="number">
                 </div>
                 <div class="checkout__sBody5s2">
                     <label for="Phone">
-                        Phone (optional)
+                        Phone
                     </label>
                     <input type="text" placeholder="Phone" name="phone" type="number">
                 </div>
