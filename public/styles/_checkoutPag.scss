@@ -43,7 +43,6 @@
 
 //todo de chekout
 .checkout{
-    
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -57,16 +56,86 @@
         justify-content: space-between;
         margin-bottom: 20px;
     }
+    &__button{
+        width: 350px;
+        height: 35px;
+        margin: 0px 0px 20px 0px;
+        line-height: 35px;
+        font-family: $primary-font;
+        background-color: $kactu-color;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 14px; 
+        cursor: pointer;
+
+        @media (max-width: $responsive) {
+            width: 355px;
+            margin: 0px 0px 25px 5px;
+        }
+
+    }
+    &__button:hover{
+        background-color: rgb(122, 140, 192);
+    }
 
 
     //primera parte
     &__body{
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 88%;
         &Name{
             font-family: $primary-font;
             border: none;
-            color: $decoration-color;
+            color: $kactu-color;
         
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+            }
+        }
+        &Pls{
+            flex-direction: row;
+            font-family: $primary-font;
+            border: none;
+            color: $kactu-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+
+            & input{
+                font-family: $primary-font;
+                height: 30px;   
+                width: 71%; 
+                border: 2px solid $decoration-color;
+                color: $kactu-color;
+                margin: 0px 40px 0px 20px;
+                padding: 0px 20px;    
+                
+                @media (max-width: $responsive) {
+                    width: 325px;
+                    margin: 0px 0px 25px 0px;
+                }
+           }
+        }
+    }
+
+    //SEGUNDA PARTE DEL CHEKOUT
+    &__s{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $kactu-color;
+
+        &Name{
+            font-family: $primary-font;
+            border: none;
+            color: $kactu-color;        
             @media (max-width: $responsive) {
                 width: 325px;
                 margin: 0px 0px 25px 0px;
@@ -75,109 +144,108 @@
         &Body1{
             font-family: $primary-font;
             border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
-            justify-content: space-between;
+            color: $kactu-color;
+            display: flex;
+            flex-direction: row;
             
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+
+            &s1{
+                & input{
+                    font-family: $primary-font;
+                    height: 30px;    
+                    width: 52%;
+                    border: 2px solid $decoration-color;
+                    color: $kactu-color;
+                    margin: 25px 20px 0px 20px;
+                    padding: 0px 20px;    
+                    
+                    @media (max-width: $responsive) {
+                        width: 325px;
+                        margin: 0px 0px 25px 0px;
+                    }
+                }
+            }
+
+            &s2{
+                & input{
+                    font-family: $primary-font;
+                    height: 30px;    
+                    width: 52%;
+                    border: 2px solid $decoration-color;
+                    color: $kactu-color;
+                    margin: 25px 0px 0px 20px;
+                    padding: 0px 20px;    
+                    
+                    @media (max-width: $responsive) {
+                        width: 325px;
+                        margin: 0px 0px 25px 0px;
+                    }
+                }
+            }
+        }
+        &Body2{
+            font-family: $primary-font;
+            border: none;
+            color: $kactu-color;
+            
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
+                
+            }
+
             & input{
                 font-family: $primary-font;
-                border: 3px solid black;
-                background-color: blueviolet;
-                //margin: 0px 25px 25px 0px;
-                //padding: 0px 20px;
-                color: $decoration-color;
+                height: 30px;   
+                width: 71%; 
+                border: 2px solid $decoration-color;
+                color: $kactu-color;
+                margin: 25px 40px 0px 20px;
+                padding: 0px 20px;    
                 
                 @media (max-width: $responsive) {
                     width: 325px;
                     margin: 0px 0px 25px 0px;
                 }
             }
-            @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
-            }
-        }
-
-    }
-
-    //SEGUNDA PARTE DEL CHEKOUT
-    &__s{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        &Name{
-            font-family: $primary-font;
-            border: none;
-            color: $decoration-color;
-        
-            @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-            }
-        }
-        &Body1{
-            font-family: $primary-font;
-            border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
-            
-            @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
-            }
-        }
-        &Body2{
-            font-family: $primary-font;
-            border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
-            
-            @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
-            }
         }
         &Body3{
             font-family: $primary-font;
             border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
+            color: $kactu-color;
             
             @media (max-width: $responsive) {
                 width: 325px;
                 margin: 0px 0px 25px 0px;
                 
+            }
+
+            & input{
+                font-family: $primary-font;
+                height: 30px; 
+                width: 63%;   
+                border: 2px solid $decoration-color;
+                color: $kactu-color;
+                margin: 25px 40px 0px 20px;
+                padding: 0px 20px;    
+                
+                @media (max-width: $responsive) {
+                    width: 325px;
+                    margin: 0px 0px 25px 0px;
+                }
             }
         }
         &Body4{
             font-family: $primary-font;
             border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
-            
-            @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
-            }
-        }
-        &Body5{
-            font-family: $primary-font;
-            border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
-            flex-direction: row;
+            color: $kactu-color;
             display: flex;
+            flex-direction: row;
             
             @media (max-width: $responsive) {
                 width: 325px;
@@ -187,42 +255,87 @@
 
             &s1{
                 margin-left: 0px;
+                & input{
+                    font-family: $primary-font;
+                    height: 30px;    
+                    border: 2px solid $decoration-color;
+                    color: $kactu-color;
+                    margin: 25px 35px 0px 20px;
+                    padding: 0px 20px;    
+                    
+                    @media (max-width: $responsive) {
+                        width: 325px;
+                        margin: 0px 0px 25px 0px;
+                    }
+                }
             }
 
             &s2{
                 margin-left: 5px;
+                & input{
+                    font-family: $primary-font;
+                    height: 30px;    
+                    border: 2px solid $decoration-color;
+                    color: $kactu-color;
+                    margin: 25px 40px 0px 20px;
+                    padding: 0px 20px;    
+                    
+                    @media (max-width: $responsive) {
+                        width: 325px;
+                        margin: 0px 0px 25px 0px;
+                    }
+                }
             }
         }
-
-            /*label
-            &__body1{
+        &Body5{
             font-family: $primary-font;
             border: none;
-            //margin: 0px 25px 25px 0px;
-            //padding: 0px 20px;
-            color: $decoration-color;
+            color: $kactu-color;
+            flex-direction: row;
+            display: flex;
             
-                @media (max-width: $responsive) {
-                    width: 325px;
-                    margin: 0px 0px 25px 0px;
-                }
-            
-            }
-            //input
-            &__body2{
-                font-family: $primary-font;
-                border: 3px black;
-                //margin: 0px 25px 25px 0px;
-                //padding: 0px 20px;
-                color: $decoration-color;
-                
-                @media (max-width: $responsive) {
-                    width: 325px;
-                    margin: 0px 0px 25px 0px;
-                }
+            @media (max-width: $responsive) {
+                width: 325px;
+                margin: 0px 0px 25px 0px;
                 
             }
-        }*/
+            
+            &s1{
+                margin: 0px -39px 0px 0px;
+                & input{
+                    font-family: $primary-font;
+                    height: 30px;    
+                    width: 20%;
+                    border: 2px solid $decoration-color;
+                    color: $kactu-color;
+                    margin: 25px 0px 25px 20px;
+                    padding: 0px 20px;    
+                    
+                    @media (max-width: $responsive) {
+                        width: 325px;
+                        margin: 0px 0px 25px 0px;
+                    }
+                }
+            }
 
+            &s2{
+                & input{
+                    font-family: $primary-font;
+                    height: 30px;    
+                    width: 25%;
+                    border: 2px solid $decoration-color;
+                    color: $kactu-color;
+                    margin: 25px 0px 25px 20px;
+                    padding: 0px 20px;    
+                    
+                    @media (max-width: $responsive) {
+                        width: 325px;
+                        margin: 0px 0px 25px 0px;
+                    }
+                }
+            }
+        }
+    
     }
+
 }
