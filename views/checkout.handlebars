@@ -15,7 +15,7 @@
         <h3 class="checkout__errorName">Error</h3>
         <p class="checkout__errorParrafo"> <strong>¡Lo sentimos! </strong></strong><br>
             Necesitamos que llenes todos los campos <br>
-              para continuar con tu compra
+            para continuar con tu compra
         </p>
     </div>
     {{/if}}
@@ -97,6 +97,10 @@
                 </div>
             </div>
         </div>
+        <input name="products" type="hidden" class="checkoutform__products">
+
         <button class="checkout__button">Send</button>
     </form>
 </section>
+
+<script src="/scripts/checkout.js"></script>

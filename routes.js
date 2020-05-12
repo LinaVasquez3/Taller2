@@ -229,51 +229,25 @@ function configureRoutes(app, db) {
     app.post('/checkout', function (req, res) {
         console.log(req.body);
 
+        var{ adressemail, firstname, lastname, adress, homeadress, city, country, age, phone, products } = req.body;
+
         req.body.creation_date = new Date();
 
+        if ( !adressemail || !firstname || !lastname || !adress || !homeadress || !city || !country || !age || !phone || !products) {
+            //cuando hay un error 
+            res.redirect('/checkout?error=true');
+            return;
+        }
 
-        //direccion de casa
+        /*direccion de casa
         //inputs requeridos
-        if (!req.body.adressemail) {
+        if (!adressemail || !products) {
             //cuando hay un error 
             res.redirect('/checkout?error=true');
             return;
-        }
-        //name and last name
-        //inputs requeridos
-        if (!req.body.firstname || !req.body.lastname) {
-            //cuando hay un error 
-            res.redirect('/checkout?error=true');
-            return;
-        }
-        //direccion de casa
-        //inputs requeridos
-        if (!req.body.adress) {
-            //cuando hay un error 
-            res.redirect('/checkout?error=true');
-            return;
-        }
-        //casa, apartamento, etc
-        //inputs requeridos
-        if (!req.body.homeadress) {
-            //cuando hay un error 
-            res.redirect('/checkout?error=true');
-            return;
-        }
-        //ciudad o pais
-        //inputs requeridos
-        if (!req.body.city || !req.body.country) {
-            //cuando hay un error 
-            res.redirect('/checkout?error=true');
-            return;
-        }
-        //edad y telefono
-        //inputs requeridos
-        if (!req.body.age || !req.body.phone) {
-            //cuando hay un error 
-            res.redirect('/checkout?error=true');
-            return;
-        }
+        }*/
+        
+        req.body.products = JSON.parse(req.body.products);
 
         const collection = db.collection('orders');
         collection.insertOne(req.body);
