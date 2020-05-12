@@ -260,7 +260,7 @@ function configureRoutes(app, db) {
 
     //Abrir la página de error cart de la página.
     app.get('/cart', function (req, res) {
-        console.log('hola en error cart');
+        console.log('hola en  cart');
         //res.send('Página de cart');
 
         //objeto contexto cart

@@ -68,7 +68,16 @@
         flex-direction: row;
     
     }
+
 }
+.cart_btn{
+    font-family: $primary-font;
+    font-size: 3px;
+    border-radius: 5px;
+    border: none;
+    background-color: $orimary-color;
+}
+
 
 .search__car1{
     margin: 20px 0px 0px 0px;

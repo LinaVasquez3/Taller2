@@ -29,14 +29,14 @@ function onload() {
             var newItem = document.createElement('div');
             newItem.classList.add('cart__item');
             newItem.innerHTML = `
-            <p>` + obj.name + `</p>
-            <img src="${obj.img}" />
-            <small>${ obj.price}</small>
-            <button>Eliminar</button>
+            <img class="body__img" src="${obj.img}" />
+            <h1 class="body__name">` + obj.name + `</h1>
+            <small class="body__price">${ obj.price}</small>
+            <button class="body__remove">Eliminar</button>
         `;
             //borrar productos
             var btn = newItem.querySelector('button');
-            btn.addEventListener('click', function(){
+            btn.addEventListener('click', function () {
                 //newItem.remove(); // elimina el elemento en patalla
                 cartList.splice(index, 1); // elimina el elemento en la lista (en memoria)
                 cartBtn.innerText = cartList.length; // actualiza el numero del carrito
@@ -83,4 +83,4 @@ function onload() {
     shopCart.onClick = renderCart();
 }
 
-window.addEventListener('load',onload);
+window.addEventListener('load', onload);

@@ -1,0 +1,150 @@
+//cuadro de cart
+.cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 0px;
+}
+.cart__square{
+    flex-direction: row;
+    justify-content: center;
+  
+    width: 700px; 
+    height: 70px; 
+    line-height: 70px;
+    border: 2px solid $kactu-color;
+    text-align: center;
+    font-family: $specially-font;
+    color: $kactu-color;
+    font-size: 32px;
+    
+        @media (max-width: $responsive) {
+            font-size: 20px;
+            width: 350px; 
+            height: 60px; 
+            line-height: 60px;
+        }
+}
+.cart__line{
+    height: 10px;
+    width: 110%;
+    background-color: $primary-color;
+    border: none;
+    margin: -35px 0px 0px -30px;
+
+    @media (max-width: $responsive) {
+        margin: -32px 0px 0px -20px;
+        height: 8px;
+    }
+}
+
+
+.cart{
+    display: flex;
+    width: 100%;
+    //max-width: 75%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px 0px 0px 0px;
+}
+.body{
+    margin-bottom: 20px;
+    
+    &__img{
+        width: 40%;
+    }
+
+    &__name{
+        margin: 0px 0px 0px 0px;
+        //line-height: 35px;
+        font-family: $primary-font;
+        font-size: 16px; 
+        font-weight: 250;
+        line-height: 27px;
+        font-style: normal;
+        color: $texto-color;
+    }
+
+    &__price{
+        margin: -26px 0px 0px 0px;
+        line-height: 35px;
+        font-family: $primary-font;
+        font-size: 16px; 
+        line-height: 27px;
+        font-style: normal;
+        text-align: right;
+        color: $texto-color;
+    }
+
+    &__remove{
+            width: 37%;
+            height: 4%;
+            line-height: 25px;
+            font-family: $primary-font;
+            border: none;
+            color: #ffffff;
+            //background-color: rgb(247, 247, 247);
+            background: $kactu-color;
+            text-align: center;
+            font-size: 14px; 
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 2px;
+        
+        &:hover{
+            background: rgb(122, 140, 192);
+        }  
+    }
+
+}
+
+/*
+    &__body{
+
+
+    }
+
+
+    &__conta{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &Name{
+            font-family: $primary-font;
+            font-size: 40px;
+            color: $decoration-color;
+            margin: 0px 0px 0px 0px;
+        }
+
+        &Price{
+            margin: 0px 0px 0px 0px;
+            //line-height: 35px;
+            font-family: $primary-font;
+            font-size: 16px; 
+            line-height: 27px;
+            font-style: normal;
+            color: $texto-color;
+        }
+        &Remove{
+            width: 15%;
+            height: 4%;
+            line-height: 25px;
+            font-family: $primary-font;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            //background-color: rgb(247, 247, 247);
+            background: $kactu-color;
+            text-align: center;
+            font-size: 14px; 
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 2px;
+        }
+        &Remove:hover{
+            background: rgb(122, 140, 192);
+        } 
+    }
+}
+*/
