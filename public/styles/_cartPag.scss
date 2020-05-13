@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: center;
     padding: 50px 0px;
+
 }
 .cart__square{
     flex-direction: row;
@@ -44,30 +45,90 @@
     width: 100%;
     //max-width: 75%;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin: 0px 0px 0px 0px;
+
+    @media (max-width: $responsive) {
+        padding: 0px 0px;
+    }
+    
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__shop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        
+        @media (max-width: $responsive) {
+            width: 100%;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        @media (max-width: $responsive) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: 0px 30px 0px 30px;
+        }
+
+    }
+
+    &__item{
+        width: 23%;
+        margin-top: 20px;
+        @media (max-width: $responsive) {
+            width: 46%;
+            padding: 0px 7px 0px 7px;
+
+        }
+    }
+
 }
 .body{
     margin-bottom: 20px;
+    @media (max-width: $responsive) {
+        margin: 0px 0px 0px 0px;
+    }
     
     &__img{
-        width: 40%;
+        width: 100%;
+        @media (max-width: $responsive) {
+            width: 100%;
+        }
     }
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+    }
+
 
     &__name{
         margin: 0px 0px 0px 0px;
         //line-height: 35px;
         font-family: $primary-font;
         font-size: 16px; 
-        font-weight: 250;
+        //font-weight: 250;
         line-height: 27px;
         font-style: normal;
         color: $texto-color;
     }
 
     &__price{
-        margin: -26px 0px 0px 0px;
+        //margin: -26px 0px 0px 0px;
         line-height: 35px;
         font-family: $primary-font;
         font-size: 16px; 
@@ -75,14 +136,16 @@
         font-style: normal;
         text-align: right;
         color: $texto-color;
+        margin-left: 20px;
     }
 
     &__remove{
-            width: 37%;
-            height: 4%;
+            width: 50%;
+            height: 7%;
             line-height: 25px;
             font-family: $primary-font;
             border: none;
+            border-radius: 4px;
             color: #ffffff;
             //background-color: rgb(247, 247, 247);
             background: $kactu-color;

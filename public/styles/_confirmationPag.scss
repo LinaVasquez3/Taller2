@@ -7,12 +7,23 @@
         &Img{
             width: 60%;
             margin: 0px 0px 10px 0px;
+
+            @media (max-width: $responsive) {
+                width: 100%;
+                margin: 0px 0px 40px 0px;
+            }
         }
 
         &H1{
             font-family: $primary-font;
             font-size: 40px;
             color: $decoration-color;
+            
+            @media (max-width: $responsive) {
+                font-size: 30px;
+                text-align: center;
+                line-height: 33px;
+            }
         }
 
         &H2{
@@ -28,6 +39,13 @@
             font-style: normal;
             text-align: center;
             align-items: center;
+
+            @media (max-width: $responsive) {
+                //margin: 0px 0px 10px 0px;
+                padding: 0px 15px 0px 15px;
+                line-height: 29px;
+                font-size: 16px;
+            }
         }
 
         H3{
@@ -35,6 +53,13 @@
             font-size: 40px;
             color: $decoration-color;
             margin: 0px 0px 15px 0px;
+
+            @media (max-width: $responsive) {
+                //margin: 0px 0px 10px 0px;
+                padding: 20px 15px 20px 15px;
+                line-height: 43px;
+                font-size: 24px;
+            }
         }
 
         &H4{
@@ -49,6 +74,12 @@
             font-style: normal;
             text-align: center;
             align-items: center;
+            @media (max-width: $responsive) {
+                //margin: 0px 0px 10px 0px;
+                padding: 0px 15px 10px 15px;
+                line-height: 26px;
+                font-size: 16px;
+            }
         }
 
         &Box{
@@ -57,6 +88,16 @@
             justify-content: space-between;
             align-items: center;
             padding: 0px 0px 20px 0px;
+
+            @media (max-width: $responsive) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 0px 20px 0px;
+
+            }
+
             &Button{
                     width: 200px;
                     height: 4%;
@@ -70,8 +111,16 @@
                     font-size: 14px; 
                     cursor: pointer;
                     text-decoration: none;
-
                     margin-right: 50px;
+
+                    @media (max-width: $responsive) {
+                        align-items: center;
+                        width: 200px;
+                        height: 32px;
+                        text-align: center;
+                        line-height: 32px;
+                        margin: 0px 0px 20px 0px;
+                    }
             }
             &Button:hover{
                background: rgb(122, 140, 192);
@@ -91,6 +140,15 @@
                 cursor: pointer;
                 text-decoration: none;    
                 margin-left: 50px;
+
+                @media (max-width: $responsive) {
+                    align-items: center;
+                    width: 200px;
+                    height: 32px;
+                    text-align: center;
+                    line-height: 32px;
+                    margin: 0px 0px 20px 0px;
+                }
             }
             &Butt:hover{
                 background: rgb(122, 140, 192);

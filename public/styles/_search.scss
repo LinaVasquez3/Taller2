@@ -11,10 +11,10 @@
     margin: 20px 0px;
 
     @media (max-width: $responsive) {
-        margin: 20px 0px 0px 95px;
-        float: none;
-        width: 55px;
-        height: 35px;
+        margin: 0px 27px 0px 0px;
+        float: right;
+        width: 30px;
+        //height: 35px;
     }
 }
 
@@ -31,10 +31,10 @@
     margin: 20px 10px;
 
     @media (max-width: $responsive) {
-        width: 0px;
-        height: 0px;
-        margin: 0px 30px;
-        font-size: 0px;
+        width: 107px;
+        height: 30px;
+        margin: 0px 0px 0px 36px;
+        font-size: 10px;
         float: none;
     }
 }
@@ -54,7 +54,7 @@
     margin-top: 10 px;
 
     @media (max-width: $responsive) {
-        margin-top: 10px;
+        margin-top: 39px;
     }
 }
 
@@ -65,17 +65,27 @@
 
     &__img{
         display: flex;
-        flex-direction: row;
-    
+        flex-direction: row;    
     }
+    
 
 }
 .cart_btn{
     font-family: $primary-font;
-    font-size: 3px;
-    border-radius: 5px;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
     border: none;
-    background-color: $orimary-color;
+    background-color: $primary-color;
+    margin-top: 15px;
+    margin-left: -12px;
+
+    @media (max-width:$responsive) {
+        margin-top: 8px;
+        margin-left: -18px;
+        margin-right: 20px;
+    }
 }
 
 
@@ -83,4 +93,9 @@
     margin: 20px 0px 0px 0px;
     width: 8%;
     float: right;
+
+    @media (max-width:$responsive) {
+        width: 18%;
+        margin: 16px 4px 0px 0px;
+    }
 }

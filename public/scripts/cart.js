@@ -30,8 +30,10 @@ function onload() {
             newItem.classList.add('cart__item');
             newItem.innerHTML = `
             <img class="body__img" src="${obj.img}" />
-            <h1 class="body__name">` + obj.name + `</h1>
-            <small class="body__price">${ obj.price}</small>
+            <div class="body__info">
+                <p class="body__name">` + obj.name + `</p>
+                <small class="body__price">${ obj.price}</small>
+            </div>
             <button class="body__remove">Eliminar</button>
         `;
             //borrar productos

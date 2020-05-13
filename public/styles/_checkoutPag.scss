@@ -20,7 +20,7 @@
         font-size: 32px;
         
             @media (max-width: $responsive) {
-                font-size: 20px;
+                font-size: 30px;
                 width: 350px; 
                 height: 60px; 
                 line-height: 60px;
@@ -41,35 +41,6 @@
     }
 }
 
-/*error
-.checkout__error{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-family: $primary-font;
-    background: rgb(206, 192, 173);
-    &Name{
-        color: $kactu-color;
-        font-size: 20px;
-        text-align: center;
-        margin: 0px 0px 0px 0px;
-    }
-    &Parr{
-        color: $kactu-color;
-        font-size: 20px;
-        text-align: center;
-        font-style: normal;
-        font-weight: 250;
-        text-align: center;
-        margin: 0px 0px 0px 0px;
-    }
-}*/
-
-
-
 
 //todo de chekout
 .checkout{
@@ -79,11 +50,7 @@
         justify-content: space-between;
 
         &__error{
-            //display: flex;
-            //flex-direction: column;
-            //justify-content: center;
-            //width: 100%;
-            // height: 100%;
+
             align-items: center;
             font-family: $primary-font;
             background: rgb(255, 237, 216);
@@ -91,6 +58,13 @@
             border-radius: 12px;
             padding: 0px 0px 0px 0px;
 
+            @media (max-width: $responsive) {
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                height: 140px;
+                margin: 0px 0px 20px 0px;
+            }
 
            &Name{
                 color: $kactu-color;
@@ -99,6 +73,11 @@
                 align-items: center;
                 margin: 8px 0px 0px 0px;
                 justify-content: center;
+
+                @media (max-width: $responsive) {
+                    width: 100%;
+                    margin: 5px 0px 0px 0px;
+                }
             }
                 
             &Parrafo{
@@ -109,6 +88,11 @@
                 text-align: center;
                 align-items: center;
                 margin: 8px 60px 20px 60px;
+
+                @media (max-width: $responsive) {
+                    width: 100%;
+                    margin: 8px 0px 20px 0px;
+                }
 
             }
         }
@@ -121,8 +105,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 20px;        
     }
+
     &__button{
         width: 350px;
         height: 35px;
@@ -137,8 +122,8 @@
         cursor: pointer;
 
         @media (max-width: $responsive) {
-            width: 355px;
-            margin: 0px 0px 25px 5px;
+            width: 100%;
+            margin: 20px 0px 20px 5px;
         }
 
     }
@@ -150,10 +135,17 @@
     //primera parte
     &__body{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         width: 83%;
         margin: 20px 0px 20px 0px;
+        
+        @media (max-width: $responsive) {
+            width: 175%;
+            display: flex;
+            flex-direction: column;
+            margin: 0px 0px 0px 0px;
+        }
 
 
         &Name{
@@ -163,8 +155,10 @@
             margin: 0px 10px 10px 50px;
         
             @media (max-width: $responsive) {
+                display: flex;
+                flex-direction: column;
                 width: 325px;
-                margin: 0px 0px 25px 0px;
+                margin: 0px 0px 15px 0px;
             }
         }
         &Pls{
@@ -175,8 +169,10 @@
             margin: 10px 10px 20px 50px;
 
             @media (max-width: $responsive) {
+                display: flex;
+                flex-direction: column;
                 width: 325px;
-                margin: 0px 0px 25px 0px;
+                margin: 0px 0px 0px 0px;
                         
             }
 
@@ -192,7 +188,7 @@
                 
                 @media (max-width: $responsive) {
                     width: 325px;
-                    margin: 0px 0px 25px 0px;
+                    margin: 0px 0px 30px 0px;
                 }
            }
         }
@@ -204,15 +200,24 @@
         flex-direction: column;
         justify-content: space-between;
  
+        @media (max-width: $responsive) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0px 0px 0px 0px;
+        }
         
         &Name{
             font-family: $primary-font;
             border: none;
             color: $texto-color;        
             margin: 0px 10px 0px 50px;
+
             @media (max-width: $responsive) {
+                display: flex;
+                flex-direction: column;
                 width: 325px;
-                margin: 0px 0px 25px 0px;
+                margin: 0px 0px 15px 0px;
             }
         }
         &Body1{
@@ -223,12 +228,14 @@
             flex-direction: row;
             margin: 10px 10px 0px 50px;
             @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
+                flex-direction: column;
+                margin: 0px 0px 0px 0px;
             }
 
             &s1{
+                @media (max-width: $responsive) {
+                    margin: 0px 0px 0px 0px;
+                }
                 & input{
                     font-family: $primary-font;
                     height: 30px;    
@@ -240,12 +247,15 @@
                     
                     @media (max-width: $responsive) {
                         width: 325px;
-                        margin: 0px 0px 25px 0px;
+                        margin: 0px 0px 10px 0px;
                     }
                 }
             }
 
             &s2{
+                @media (max-width: $responsive) {
+                    margin: 0px 0px 0px 0px;
+                }
                 & input{
                     font-family: $primary-font;
                     height: 30px;    
@@ -257,7 +267,7 @@
                     
                     @media (max-width: $responsive) {
                         width: 325px;
-                        margin: 0px 0px 25px 0px;
+                        margin: 0px 0px 10px 0px;
                     }
                 }
             }
@@ -267,10 +277,10 @@
             border: none;
             color: $kactu-color;
             margin: 0px 10px 0px 50px;
+
             @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
+                flex-direction: column;
+                margin: 0px 0px 0px 0px;
             }
 
             & input{
@@ -284,7 +294,7 @@
                 
                 @media (max-width: $responsive) {
                     width: 325px;
-                    margin: 0px 0px 25px 0px;
+                    margin: 0px 0px 10px 0px;
                 }
             }
         }
@@ -293,10 +303,10 @@
             border: none;
             color: $kactu-color;
             margin: 0px 10px 0px 50px;
+
             @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
+                flex-direction: column;
+                margin: 0px 0px 0px 0px;
             }
 
             & input{
@@ -310,7 +320,7 @@
                 
                 @media (max-width: $responsive) {
                     width: 325px;
-                    margin: 0px 0px 25px 0px;
+                    margin: 0px 0px 10px 0px;
                 }
             }
         }
@@ -322,13 +332,15 @@
             flex-direction: row;
             margin: 0px 10px 0px 50px;
             @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
+                flex-direction: column;
+                margin: 0px 0px 0px 0px;
             }
 
             &s1{
                 margin-left: 0px;
+                @media (max-width: $responsive) {
+                    margin: 0px 0px 0px 0px;
+                }
                 & input{
                     font-family: $primary-font;
                     height: 30px;
@@ -340,13 +352,16 @@
                     
                     @media (max-width: $responsive) {
                         width: 325px;
-                        margin: 0px 0px 25px 0px;
+                        margin: 0px 0px 10px 0px;
                     }
                 }
             }
 
             &s2{
                 margin-left: 5px;
+                @media (max-width: $responsive) {
+                    margin: 0px 0px 0px 0px;
+                }
                 & input{
                     font-family: $primary-font;
                     height: 30px;    
@@ -358,7 +373,7 @@
                     
                     @media (max-width: $responsive) {
                         width: 325px;
-                        margin: 0px 0px 25px 0px;
+                        margin: 0px 0px 10px 0px;
                     }
                 }
             }
@@ -371,13 +386,15 @@
             display: flex;
             margin: 0px 10px 0px 50px;
             @media (max-width: $responsive) {
-                width: 325px;
-                margin: 0px 0px 25px 0px;
-                
+                flex-direction: column;
+                margin: 0px 0px 0px 0px;
             }
             
             &s1{
                 margin: 0px -39px 0px 0px;
+                @media (max-width: $responsive) {
+                    margin: 0px 0px 0px 0px;
+                }
                 & input{
                     font-family: $primary-font;
                     height: 30px;    
@@ -389,12 +406,15 @@
                     
                     @media (max-width: $responsive) {
                         width: 325px;
-                        margin: 0px 0px 25px 0px;
+                        margin: 0px 0px 10px 0px;
                     }
                 }
             }
 
             &s2{
+                @media (max-width: $responsive) {
+                    margin: 0px 0px 0px 0px;
+                }
                 & input{
                     font-family: $primary-font;
                     height: 30px;    
@@ -406,7 +426,7 @@
                     
                     @media (max-width: $responsive) {
                         width: 325px;
-                        margin: 0px 0px 25px 0px;
+                        margin: 0px 0px 10px 0px;
                     }
                 }
             }
