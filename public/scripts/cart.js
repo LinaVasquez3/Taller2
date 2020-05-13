@@ -24,6 +24,11 @@ function onload() {
 
         var cartContainer = document.querySelector('.cart__list');
         //borra el cart container - borra las copias
+        
+        if (!cartContainer) {
+            return;
+        }
+
         cartContainer.innerHTML = '';
         cartList.forEach(function (obj, index) {
             var newItem = document.createElement('div');

@@ -136,7 +136,37 @@
             align-items: right;
         }
     }
-    &Add{
+
+    &Shipping{
+        font-family: $primary-font;
+        color: $kactu-color;
+        font-size: 20px;
+        line-height: 52px;   
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+//especificaciones del producto
+.thumb{
+    margin-left: 8px;
+    margin-bottom: 20px;
+    width: 20%;
+
+    @media (max-width: $responsive) {
+        margin-left: 8px;
+        margin-bottom: 20px;
+        width: 65%;    
+    }
+
+    &__vibu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &Button{
         width: 40%;
         height: 4%;
         line-height: 25px;
@@ -150,21 +180,38 @@
         cursor: pointer;
         text-decoration: none;
         margin-top: 2px;
-        &Add:hover{
-            background: rgb(122, 140, 192);
-        }
+
         @media (max-width: $responsive) {
-            width: 100%;
-            margin: 5px 0px 0px 0px;
+            font-size: 12px;
+            width: 85px;
         }
-        
     }
-    &Shipping{
-        font-family: $primary-font;
-        color: $kactu-color;
-        font-size: 20px;
-        line-height: 52px;   
-        text-align: center;
-        margin: 0px 0px 0px 0px;
+    &Button:hover{
+        background: rgb(122, 140, 192);
     }
+
 }
+/*
+.thumb__vibuButton{
+    width: 40%;
+    height: 4%;
+    line-height: 25px;
+    font-family: $primary-font;
+    border: none;
+    color: #ffffff;
+    //background-color: rgb(247, 247, 247);
+    background: $kactu-color;
+    text-align: center;
+    font-size: 14px; 
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2px;
+    &Add:hover{
+        background: rgb(122, 140, 192);
+    }
+    @media (max-width: $responsive) {
+        width: 100%;
+        margin: 5px 0px 0px 0px;
+    }
+    
+}*/

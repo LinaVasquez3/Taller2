@@ -274,7 +274,6 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #faf3f3;
 }
 
 .mainheader__logo {
@@ -1876,7 +1875,44 @@ body, html {
           align-items: right;
 }
 
-.product2__blockAdd {
+.product2__blockShipping {
+  font-family: "Poppins";
+  color: #434F73;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.thumb {
+  margin-left: 8px;
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+@media (max-width: 414px) {
+  .thumb {
+    margin-left: 8px;
+    margin-bottom: 20px;
+    width: 65%;
+  }
+}
+
+.thumb__vibu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.thumbButton {
   width: 40%;
   height: 4%;
   line-height: 25px;
@@ -1891,26 +1927,41 @@ body, html {
   margin-top: 2px;
 }
 
-.product2__blockAddAdd:hover {
-  background: #7a8cc0;
-}
-
 @media (max-width: 414px) {
-  .product2__blockAdd {
-    width: 100%;
-    margin: 5px 0px 0px 0px;
+  .thumbButton {
+    font-size: 12px;
+    width: 85px;
   }
 }
 
-.product2__blockShipping {
-  font-family: "Poppins";
-  color: #434F73;
-  font-size: 20px;
-  line-height: 52px;
-  text-align: center;
-  margin: 0px 0px 0px 0px;
+.thumbButton:hover {
+  background: #7a8cc0;
 }
 
+/*
+.thumb__vibuButton{
+    width: 40%;
+    height: 4%;
+    line-height: 25px;
+    font-family: $primary-font;
+    border: none;
+    color: #ffffff;
+    //background-color: rgb(247, 247, 247);
+    background: $kactu-color;
+    text-align: center;
+    font-size: 14px; 
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2px;
+    &Add:hover{
+        background: rgb(122, 140, 192);
+    }
+    @media (max-width: $responsive) {
+        width: 100%;
+        margin: 5px 0px 0px 0px;
+    }
+    
+}*/
 .orders {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3249,6 +3300,92 @@ body, html {
   }
 }
 
+.cart__text {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins";
+  background: #ffedd8;
+  border: 3px solid #F2CEA2;
+  border-radius: 12px;
+  padding: 0px 0px 0px 0px;
+}
+
+@media (max-width: 414px) {
+  .cart__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 260px;
+    height: 75px;
+    margin: auto;
+  }
+}
+
+.cart__tittle {
+  color: #434F73;
+  font-size: 20px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px 0px 0px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 414px) {
+  .cart__tittle {
+    width: 100%;
+    margin: 5px 0px 0px 0px;
+  }
+}
+
+.cart__p {
+  color: #282727;
+  font-size: 15px;
+  text-align: center;
+  font-style: normal;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px 60px 20px 60px;
+}
+
+@media (max-width: 414px) {
+  .cart__p {
+    width: 100%;
+    margin: 8px 0px 20px 0px;
+  }
+}
+
+.cart__total {
+  color: #434F73;
+  font-size: 20px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px 0px 0px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 414px) {
+  .cart__total {
+    width: 100%;
+    margin: 5px 0px 0px 0px;
+  }
+}
+
 .cart__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3392,53 +3529,153 @@ body, html {
   background: #7a8cc0;
 }
 
-/*
-    &__body{
-
-
-    }
-
-
-    &__conta{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        &Name{
-            font-family: $primary-font;
-            font-size: 40px;
-            color: $decoration-color;
-            margin: 0px 0px 0px 0px;
-        }
-
-        &Price{
-            margin: 0px 0px 0px 0px;
-            //line-height: 35px;
-            font-family: $primary-font;
-            font-size: 16px; 
-            line-height: 27px;
-            font-style: normal;
-            color: $texto-color;
-        }
-        &Remove{
-            width: 15%;
-            height: 4%;
-            line-height: 25px;
-            font-family: $primary-font;
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            //background-color: rgb(247, 247, 247);
-            background: $kactu-color;
-            text-align: center;
-            font-size: 14px; 
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 2px;
-        }
-        &Remove:hover{
-            background: rgb(122, 140, 192);
-        } 
-    }
+.confirmation__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-b;
+      -ms-flex-pack: space-b;
+          justify-content: space-b;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-*/
+
+.confirmation__boxBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 414px) {
+  .confirmation__boxBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 0px 20px 0px;
+  }
+}
+
+.confirmation__boxBoxHome {
+  width: 200px;
+  height: 4%;
+  line-height: 25px;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px 20px 0px 0px;
+}
+
+@media (max-width: 414px) {
+  .confirmation__boxBoxHome {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 200px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin: 20px 0px 20px 0px;
+  }
+}
+
+.confirmation__boxBoxHome:hover {
+  background: #7a8cc0;
+}
+
+.confirmation__boxBoxShop {
+  width: 200px;
+  height: 4%;
+  line-height: 25px;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px 20px 0px 0px;
+}
+
+@media (max-width: 414px) {
+  .confirmation__boxBoxShop {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 200px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.confirmation__boxBoxShop:hover {
+  background: #7a8cc0;
+}
+
+.confirmation__boxBoxCheck {
+  width: 200px;
+  height: 4%;
+  line-height: 25px;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px 20px 0px 0px;
+}
+
+@media (max-width: 414px) {
+  .confirmation__boxBoxCheck {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 200px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.confirmation__boxBoxCheck:hover {
+  background: #7a8cc0;
+}
 /*# sourceMappingURL=main.css.map */

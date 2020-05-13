@@ -39,8 +39,8 @@
     }
 }
 
-
 .cart{
+
     display: flex;
     width: 100%;
     //max-width: 75%;
@@ -53,6 +53,69 @@
         padding: 0px 0px;
     }
     
+    &__text{
+        margin: auto;
+        align-items: center;
+        font-family: $primary-font;
+        background: rgb(255, 237, 216);
+        border: 3px solid $primary-color;
+        border-radius: 12px;
+        padding: 0px 0px 0px 0px;
+
+        @media (max-width: $responsive) {
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+            height: 75px;
+            margin: auto;
+        }
+    }
+    &__tittle{
+            color: $kactu-color;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            margin: 8px 0px 0px 0px;
+            justify-content: center;
+
+            @media (max-width: $responsive) {
+                width: 100%;
+                margin: 5px 0px 0px 0px;
+            }
+        }
+    
+    &__p{
+            color: $texto-color;
+            font-size: 15px;
+            text-align: center;
+            font-style: normal;
+            text-align: center;
+            align-items: center;
+            margin: 8px 60px 20px 60px;
+
+            @media (max-width: $responsive) {
+                width: 100%;
+                margin: 8px 0px 20px 0px;
+            }
+
+        }
+    
+
+    &__total{
+        color: $kactu-color;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        margin: 8px 0px 0px 0px;
+        justify-content: center;
+
+        @media (max-width: $responsive) {
+            width: 100%;
+            margin: 5px 0px 0px 0px;
+        }
+    }
+    
+
 
     &__header{
         display: flex;
@@ -162,52 +225,120 @@
 
 }
 
-/*
-    &__body{
+//BOTONES
 
+.confirmation{
 
-    }
-
-
-    &__conta{
+    &__box{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        &Name{
-            font-family: $primary-font;
-            font-size: 40px;
-            color: $decoration-color;
-            margin: 0px 0px 0px 0px;
-        }
+        flex-direction: column;
+        justify-content: space-b;
+        align-items: center;
+        &Box{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
 
-        &Price{
-            margin: 0px 0px 0px 0px;
-            //line-height: 35px;
-            font-family: $primary-font;
-            font-size: 16px; 
-            line-height: 27px;
-            font-style: normal;
-            color: $texto-color;
+            @media (max-width: $responsive) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 0px 20px 0px;
+
+            }
+
+            //HOME
+            &Home{
+                    width: 200px;
+                    height: 4%;
+                    line-height: 25px;
+                    font-family: $primary-font;
+                    border: none;
+                    border-radius: 5px;
+                    color: #ffffff;
+                    background: $kactu-color;
+                    text-align: center;
+                    font-size: 14px; 
+                    cursor: pointer;
+                    text-decoration: none;
+                    margin: 0px 20px 0px 0px;
+
+
+                    @media (max-width: $responsive) {
+                        align-items: center;
+                        width: 200px;
+                        height: 32px;
+                        text-align: center;
+                        line-height: 32px;
+                        margin: 20px 0px 20px 0px;
+                    }
+            }
+            &Home:hover{
+               background: rgb(122, 140, 192);
+            }
+
+            //SHOP
+            &Shop{
+                width: 200px;
+                height: 4%;
+                line-height: 25px;
+                font-family: $primary-font;
+                border: none;
+                border-radius: 5px;
+                color: #ffffff;
+                background: $kactu-color;
+                text-align: center;
+                font-size: 14px; 
+                cursor: pointer;
+                text-decoration: none;   
+                margin: 0px 20px 0px 0px;
+ 
+                
+                @media (max-width: $responsive) {
+                    align-items: center;
+                    width: 200px;
+                    height: 32px;
+                    text-align: center;
+                    line-height: 32px;
+                    margin: 0px 0px 20px 0px;
+                }
+            }
+            &Shop:hover{
+                background: rgb(122, 140, 192);
+            }
+            
+            //CHECKOUT
+            &Check{
+                width: 200px;
+                height: 4%;
+                line-height: 25px;
+                font-family: $primary-font;
+                border: none;
+                border-radius: 5px;
+                color: #ffffff;
+                background: $kactu-color;
+                text-align: center;
+                font-size: 14px; 
+                cursor: pointer;
+                text-decoration: none; 
+                margin: 0px 20px 0px 0px;
+
+
+                @media (max-width: $responsive) {
+                    align-items: center;
+                    width: 200px;
+                    height: 32px;
+                    text-align: center;
+                    line-height: 32px;
+                    margin: 0px 0px 20px 0px;
+                }
+            }
+            &Check:hover{
+                background: rgb(122, 140, 192);
+            }
+            
         }
-        &Remove{
-            width: 15%;
-            height: 4%;
-            line-height: 25px;
-            font-family: $primary-font;
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            //background-color: rgb(247, 247, 247);
-            background: $kactu-color;
-            text-align: center;
-            font-size: 14px; 
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 2px;
-        }
-        &Remove:hover{
-            background: rgb(122, 140, 192);
-        } 
     }
 }
-*/
