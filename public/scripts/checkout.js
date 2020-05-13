@@ -8,14 +8,31 @@ function onLoad() {
         });
     });
 
+    
+
     var form = document.querySelector('.checkout__form');
+    console.log(form);
     form.addEventListener('submit', function () {
         var input = document.querySelector('.checkoutform__products');
         input.value = localStorage.getItem('cartList');
 
         //borrar el carrito para cuando termine la compra
-        localStorage.removeItem('cartList');
+        handleDelete();
+        
+        
     });
+
+}
+
+function handleDelete () {
+    var checkoutError = document.querySelector('.checkout__error');
+
+    if (!document.body.contains(checkoutError)){
+        localStorage.removeItem('cartList');
+    }
+
+    // localStorage.removeItem('cartList');
+
 
 }
 
