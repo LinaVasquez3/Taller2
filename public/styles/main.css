@@ -610,9 +610,9 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -629,8 +629,8 @@ body, html {
   }
 }
 
-/*strawberry*/
-.content__strawberry {
+/*shadows*/
+.content__shadows {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,15 +641,14 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0px 25px 0px 0px;
 }
 
-.content__strawberry button {
+.content__shadows button {
   background: none;
 }
 
 @media (max-width: 414px) {
-  .content__strawberry {
+  .content__shadows {
     margin: 0px 25px 20px 0px;
   }
 }
@@ -670,7 +669,7 @@ body, html {
 .content__icon1 {
   width: 32px;
   float: right;
-  margin: 5px 0px 0px 0px;
+  margin: 5px 26px 0px 0px;
 }
 
 .content__shine1 {
@@ -714,8 +713,12 @@ body, html {
   background: #e6ebfa;
 }
 
-/*Orange*/
-.content__orange {
+/*Lips*/
+.content__img2 {
+  width: 350px;
+}
+
+.content__lips {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,21 +729,16 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0px 25px 0px 0px;
 }
 
-.content__orange button {
+.content__lips button {
   background: none;
 }
 
 @media (max-width: 414px) {
-  .content__orange {
+  .content__lips {
     margin: 0px 25px 20px 0px;
   }
-}
-
-.content__img2 {
-  width: 350px;
 }
 
 .content__tittle2 {
@@ -799,8 +797,12 @@ body, html {
   background: #e6ebfa;
 }
 
-/*Honey*/
-.content__honey {
+/*Skin*/
+.content__img3 {
+  width: 350px;
+}
+
+.content__skin {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -811,15 +813,94 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0px 25px 0px 0px;
 }
 
-.content__honey button {
+.content__skin button {
   background: none;
 }
 
 @media (max-width: 414px) {
-  .content__honey {
+  .content__skin {
+    margin: 0px 25px 20px 0px;
+  }
+}
+
+.content__tittle3 {
+  font-family: "Poppins";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
+}
+
+.content__icon1 {
+  width: 32px;
+  float: right;
+  margin: 5px 0px 0px 0px;
+}
+
+.content__shine3 {
+  font-family: "Poppins";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 250;
+  margin: 0px 0px 0px 0px;
+}
+
+.content__des3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+}
+
+.content__price3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 5px 0px 0px 0px;
+  float: right;
+}
+
+.content__bag3 {
+  width: 350px;
+  height: 35px;
+  margin: 0px 0px 10px 0px;
+  line-height: 35px;
+  font-family: "Poppins";
+  border: 2px solid #434F73;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.content__bag3:hover {
+  background: #e6ebfa;
+}
+
+/*Mascara*/
+.content__mascara {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content__mascara button {
+  background: none;
+}
+
+@media (max-width: 414px) {
+  .content__mascara {
     margin: 0px 25px 20px 0px;
   }
 }
